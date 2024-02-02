@@ -1,0 +1,475 @@
+\documentclass[12pt]{alittlebear}
+
+\def\name{Joseph Siu}
+\def\course{MAT240: Algebra I}
+\def\headername{Definition Sheet}
+\def\headernum{}
+
+\begin{document} 
+
+\newch[Fields and Polynomials]{ch1}{
+    
+    \newd[Field]{def1}{
+        A field $\F$ is a set with two special elements "$0\in \F$" and "$1\in \F$" and two operations "$+$" and "$\cdot$" which satisfy the following axioms.
+        \begin{enumerate}
+            \item (Commutativity) For all $x,y\in\F$ we have: $x+y=y+x$ and $x\cdot y=y\cdot x$.
+            \item (Associativity) For all $x,y,z\in\F$ we have: $(x+y)+z=x+(y+z)$ and $(x\cdot y)\cdot z=x\cdot(y\cdot z)$.
+            \item (Distributivity) For all $x,y,z\in\F$ we have: $x\cdot(y+z)=x\cdot y+x\cdot z$.
+            \item (Identities) For all $x\in\F$ we have: $x+0=x$ and $x\cdot 1=x$.
+            \item (Inverses) For all $x\in\F$ there exists $y\in\F$ such that $x+y=0$. For all $x\in\F\setminus\{0\}$ there exists $z\in\F$ such that $x\cdot z=1$.
+        \end{enumerate}
+        \newn{
+            $\Q$ is a field where $\Z$ is not a field becasue of the absence of some multiplicative inverse.
+        }
+    }
+    \newco[Field]{coro1}{
+        Let $\F$ be a field and $a,b,c\in\F$.
+
+        \begin{enumerate}
+            \item If $a+c=b+c$, then $a=b$.
+            \item If $c\neq 0$ and $c\cd a = c\cd b$, then $a=b$.
+            \item The field elements $0,1$ are unique.
+            \item The elements $y$ and $z$ from Axoim $5$ are unique. (From now on, we will denote the additive inverse of $x$ by $-x$, and the multiplicative inverse of $x$ by $x^{-1}.$)
+            \item $a\cd 0=0$.
+            \item $(-a)\cd(b)=-(a\cd b)=(a)\cd(-b).$
+            \item $-(-a)=a$. If $a\neq0$, then $\bra{a^{-1}}^{-1}=a$.
+            \item If $a\cd b=0$, then $a=0$ or $b=0$.
+        \end{enumerate}
+    }
+        
+    \envbreak
+    \newt[Equivalence]{thm1}{
+        \begin{enumerate}
+            \item $\sim$ is an equivalence relation.
+            \item $a\sim b$ if and only if $a$ and $b$ have the same remainder when divided by $n$.
+            \item There are exactly $n$ equivalence classes for this relation: $[0],[1],\ldots,[n-1]$ - one for each possible remainder for division by $n$.
+        \end{enumerate}
+    }
+
+    \newd[$\Z_n$]{def2}{
+        Let $\Z_n=\{[0],[1],\ldots,[n-1]\}$ be the est of equivalence classes for this equivalence relation. We define $+,\cd$ on $\Z_n$ as follows:
+        \[[a]+[b]=[a+b],\]
+        \[[a]\cd[b]=[a\cd b].\]
+    }
+
+    \envbreak
+    \newt[Quadratic Formula]{thm2}{
+        Let $a,b,c\in\R$. The quadratic equation $ax^2+bx+c=0$ (where $a\neq0$) has:
+        \begin{enumerate}
+            \item Solutions $x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$ if $b^2-4ac\geq0.$
+            \item No solutions if $b^2-4ac<0.$
+        \end{enumerate}
+    }
+
+    \newd[Complex]{def3}{
+        Let $i=\sqrt{-1}$. I.e. $i$ is a number with the property that $i^2=-1$.
+
+        Let $\C=\{a+bi \mid a,b\in\R\}.$ We call $\C$ the set of complex numbers and we define addition and multiplication $+,\cd$ in the obvious ways:
+        \[(x+yi)+(a+bi)=(x+a)+(y+b)i\]
+        \[(x+yi)\cd(a+bi)=ax+bi+ayi+byi^2=(ax-by)+(ay+bx)i\]
+        \newn{
+            $\C$ is a field.
+        }
+
+        Given a complex number $z=x+yi$, we define its \underline{\textbf{conjugate}} by: \[\overline{z}=x-yi.\]
+
+        We define the \underline{\textbf{length (or modulus)}} of a complex number by: \[|z|=\sqrt{x^2+y^2}.\] 
+
+        Note that we in the $xy$-plane, we obtain $\overline{z}$, the conjugate of $z$, by reflecting $z$ in the $x$-axis, and the length of a complex number is just the usual distance from $z$ to the origin in the $xy$-plane.
+    }
+
+    \newt[Complex]{thm3}{
+        For any $z,w\in\C$ we have:
+        \begin{enumerate}
+            \item $\overline{z+w}=\overline{z}+\overline{w}$.
+            \item $\overline{z\cd w}=\overline{z}\cd\overline{w}$.
+            \item $\overline{\frac{z}{w}}=\frac{\overline{z}}{\overline{w}}$ (provided $w\neq0$).
+            \item $\overline{\overline{z}}=z$.
+            \item $z\overline{z}=|z|^2$.
+            \item $z^{-1}=\frac{\overline{z}}{|z|^2}$ (provided $z\neq0$).
+            \item $|zw|=|z||w|$.
+            \item $\abs{\frac{z}{w}}=\frac{|z|}{|w|}$ (provided $w\neq0$).
+            \item $|z+w|\leq |z| + |w|$ ("Triangle nequality for Complex Numbers").
+        \end{enumerate}
+    }
+
+    \envbreak
+    \newd[Polar Form]{def4}{
+        For $z=x+yi$, we define its \underline{\textbf{polar form}} as $z=re^{i\theta}$, where $r=|z|=\sqrt{x^2+y^2}$ and $\theta$ is the angle between $z$ and the positive $x$ axis (measured counterclockwise, in radians). The angle $\theta$ is called the \underline{\textbf{argument}} of $z$, and $r$ is called the \underline{\textbf{length (or modulus)}} of $z$.
+    }
+    \newt[Polar Form]{thm4}{
+        Let $z=re^{i\theta}$, $w=Re^{i\phi}$.
+        \begin{align*}
+            zw=rRe^{i(\theta+\phi)}\\
+            z^n=r^ne^{in\theta}\\
+        \end{align*}
+    }
+
+    \envbreak
+    \newd[Polynomial]{def5}{
+        A polynomial $p$ with coefficient from $\F$ is an expression \[p(x)=c_0+c_1 x + c_2 x^2 +\cdots + c_n x^n\] where $c_i\in\F$. We call the field elements $c_0,\ldots,c_n$ the "coefficients" of $p$.
+
+        The largest exponent $n$ so that $c_n\neq0$ is called the \tbf{degree} of $p$, and we typically write $\deg p=n$. Constant polynomials are degree 0.
+
+        The set of all polynomials over $\F$ is denoted by $P(\F)$.
+
+        The set of all polynomials of degree \tbf{less than or equal} to $n$ is denoted by $P_n(\F)$.
+    }
+    \newt[Polynomial]{thm5}{
+        Let $\F$ be a field, and $f,g\in P(\F)$ be non-zero polynomials. Then there exist unique polynomials $q,r\in P(\F)$ so that:
+        \begin{enumerate}
+            \item $f(x)=q(x)g(x)+r(x)$.
+            \item $\deg r<\deg g$ if $\deg g\neq0$.
+            \item $r=0$ if $\deg g=0$.
+        \end{enumerate}
+    }
+    \newd[Polynomial Cont.]{def6}{
+        Let $\F$ be a field and $f,g\in P(\F)$. We say that $g$ divides $f$ if $f(x)=q(x)g(x)$ for some polynomial $q\in P(\F)$.
+
+        We say that a non-constant polynomial $p\in P(\F)$ is "irreducible" if we \tbf{cannot} express $p$ as a product of polynomials of smaller degree.
+
+        I.e. $p$ is irreducible if we \tbf{cannot} write $p(x)=g(x)q(x)$ for any polynomials $g,q\in P(\F)$ with the property that both $\deg g, \deg q < \deg p$. 
+
+        \newn{
+            $f(x)=x^2-2$ is irreducible over $\Q$ but not over $\R$.
+        }
+    }
+
+    \newt[Polynomial Cont.]{thm6}{
+        Let $\F$ be a field, $p\in P(\F)$ and $\deg p\geq 1$. Then $a\in \F$ is a root of $p$ if and only if $x-a $ divides $p$. 
+    }
+    \envbreak
+
+    \newt[Fundamental Theorem of Algebra]{thm7}{
+        Every non-constant polynomial has a root over $\C$.
+
+        In fact, every non-constant polynomial factors completely into a product of linear terms over $\C$.
+    }
+}
+
+\newpage
+\tcbcnt{definition}{8}
+\tcbcnt{theorem}{10}
+\newch[Linear Systems]{ch2}{
+    \newd[Linear]{d9}{
+        Let $\F$ be a field and $b,c_1,\ldots,c_n\in\F$. An equation in the variables $x_1,\ldots,x_n$ is called \tbf{linear} if it can be expressed as $c_1x_1+c_2x_2+\cdots+ c_n x_n=b$.
+    }
+
+    \newd[System of Equations]{d10}{
+        Let $\F$ be a field, and $a_{ij}\in\F$ (where $i\in\{1,\ldots,m\}$ and $j\in\{1,\ldots, n\}$). A \tbf{system of linear equations} in variables $x_1,x_2,\ldots,x_n$ is a finite collection of linear equations in $x_1,x_2,\ldots,x_n$: 
+        
+        \[\begin{aligned}
+            a_{11}x_{1}+a_{12}x_{2}+\cdots+a_{1n}x_{n}& =b_{1}  \\
+            a_{21}x_{1}+a_{22}x_{2}+\cdots+a_{2n}x_{n}& =b_{2}  \\
+            \vdots&\\\
+            a_{m1}x_{1}+a_{m2}x_{2}+\cdots+a_{mn}x_{n}& =b_{m}.     
+        \end{aligned}\] 
+        
+        A system of $m$ equations with $n$ unkowns is called an \tbf{$m\times n$ system}.
+    }
+
+    \newd[Solutions]{d11}{
+        A \tbf{solution} to a linear equation $c_1x_1+c_2x_2+\cdots + c_n x_n=b$ is a choice of field elements $s_1,s_2,\ldots,s_n\in\F$, so that when we substitute them for $x_1,x_2,\ldots,x_n$ respectively, the resulting equation is true.
+
+        That is, we have $c_1s_1+c_2s_2+\cdots+c_n s_n=b$ (i.e. the left- and right-hand sides are equal.)
+
+        A \tbf{solution to a system} is a choice of field elements $s_1,s_2,\ldots,s_n$ which solves $\textit{every}$ equation of the system.
+    }
+
+    \newd[Consistent]{d12}{
+        If a system of equations has at least one solution, we say it is \tbf{consistent}.
+
+        If a system of equations has no solutions, we say it is \tbf{inconsistent}.
+    }
+    \envbreak
+
+    \newd[Matrix]{d13}{
+        An \tbf{$m\times n$ matrix} over $\F$ is a rectangular array of field elements consisting of $m$ rows and $n$ columns.
+
+        We denote the $j^{\T{th}}$ entry in row $i$ of matrix $A$, by \tbf{$a_{ij}$}, and call it the \tbf{$ij^{\T{th}}$ entry} of $A$.
+    }
+
+    \newd[Augmented Matrix]{d14}{
+        Consider a system of equations: \[
+            \begin{aligned}
+                a_{11}x_{1}+a_{12}x_{2}&+\cdots+a_{1n}x_{n}& =b_{1}  \\
+                a_{21}x_{1}+a_{22}x_{2}&+\cdots+a_{2n}x_{n}& =b_{2}  \\
+                &\vdots &\vdots\\
+                a_{m1}x_{1}+a_{m2}x_{2}&+\cdots+a_{mn}x_{n}& =b_{m} 
+            \end{aligned}  
+        \]
+
+        We defie the \tbf{augmented matrix} \textit{corresponding to} the system of equations above to be: \[
+            \left.\left(\begin{array}{cccc|c}a_{11}&a_{12}&\cdots&a_{1n}&b_{1}\\a_{21}&a_{22}&\cdots&a_{2n}&b_{2}\\&&\cdots&&\\a_{m1}&a_{m2}&\cdots&a_{mn}&b_{m}\end{array}\right.\right),
+            \]
+    }
+    \newd[RREF]{d15}{
+        We say a matrix $A$ is in \underline{\textbf{reduced row echelon form}} if \textit{all} of the following conditions are met:
+        \begin{enumerate}
+            \item All zero rows are at the bottom of the matrix $A$.
+            \item The first non-zero entry in each non-zero row is a $1$. (Such entries are called ``leading 1's''.)
+            \item The leading 1's move to the right, as we go down the rows of $A$.
+            \item All entries above and below a leading 1 are 0.
+        \end{enumerate}
+
+        We will use the abbreviation "RREF" for "row-reduced echelon form", for the rest of the text.
+
+        \newn{
+            All matrices have a unique RREF.
+        }
+    }
+
+    \newt[Gaussian Elimination]{thm11}{
+        To "row reduce" a matrix perform the following steps:
+        \begin{enumerate}
+            \item If the matrix consists entire of 0's, stop. It's already row-reduced.
+            \item Find the first column with a non-zero entry and move the corresponding row to the top. (We will call the first non-zero entry $a$.)
+            \item Divide the row by the number $a$ to obtain a leading one.
+            \item Subtract multiples of ths row from the rows above and below, in order to make each entry above and below the leading 1 equal to 0.
+            \item Repeat 1-4 on the matrix consisting of the remaining rows.
+        \end{enumerate}
+    }
+
+    \newd[Variables]{def16}{
+        Suppose that $R$ is a matrix in RREF. We say that $x_i$ is a \underline{\tbf{leading variable}} if column $i$ contains a leading one. If a variable is not "leading" we call it a \underline{\tbf{non-leading variable}}.
+    }
+    \newr{
+        To solve a system:
+        \begin{enumerate}
+            \item Row reduce the augmented coefficient matrix.
+            \item If there is a row of the form $(\quad0\quad0\quad\cdots\quad0\quad|\quad1\quad)$ then there are no solutions.
+            \item Otherwise, assign the non-leading variables (if any) parameters, and use the equatoins coming from the rows of the RREF to solve for each variable interms of the parameters.
+        \end{enumerate}
+    }
+
+    \newd[Homogeneous]{d17}{
+        A system of equations is called \underline{\tbf{homogeneous}} if it is of the form \[\begin{aligned}
+            a_{11}x_{1}+a_{12}x_{2}+\cdots+a_{1n}x_{n}& =0  \\
+            a_{21}x_{1}+a_{22}x_{2}+\cdots+a_{2n}x_{n}& =0  \\
+            &\vdots \\
+            a_{m1}x_{1}+a_{m2}x_{2}+\cdots+a_{mn}x_{n}& =0. 
+            \end{aligned}\]
+        In other words, it is homogeneous if the constant term (or right hand side) of \tbf{\textit{each}} equation in the system is 0.
+        \newn{
+            \begin{itemize}
+                \item $x_1=0,x_2=0,\ldots,x_n=0$ is \tbf{\textit{always}} a solution to any homogeneous equation.
+                \item We call this solution the \tbf{\textit{trivial}} solutoin.
+                \item Any other solution is called a \tbf{\textit{non-trivial}} solution.
+            \end{itemize}
+        }
+    }
+}
+
+\newpage
+\newch[Vector Spaces]{ch3}{
+    \newd[Vector Operators]{d18}{
+        Given two vectors \tbf{v,w} we define \underline{\tbf{their sum}} \tbf{v+w} using “tip to tail" addition (or the “parallelogram law of addition"). In the diagram in the margin, the vector \tbf{v+w} is diagonal in the parallelogram spanned by v, w that shares its tail with v and w.
+
+        We can also define their \tbf{\underline{difference}} \tbf{v-w} geometrically using the same parallelogram: v- w is the diagonal going from the tip of w to the tip of v.
+
+        Finally, given a vector v and real number $a\in\mathbb{R}$, we can \underline{\tbf{scale v by $a$}} as follows:
+        
+        \begin{itemize}
+            \item $0\mathbf{v}=\mathbf{0}.$
+            \item If $a>0$, then $a\mathbf{v}$ is a vector pointing in the same direction as v with length scaled by $a$
+            \item If $\alpha<0$, then $\alpha$vis a vector pointing in the opposite direction as v with length scaled by $|\alpha|.$
+        \end{itemize}
+
+        \newn{
+            If $v=(x,y,z)$ and $w=(p,q,r)$, then $v+w=(x+p,y+q,z+r)$, $av=(ax,ay,az)$.
+        }
+    }
+
+    \tcbcnt{definition}{19}
+
+    \newd[$\F^n$]{def20}{
+        Let $\F$ be a field. Consider the set $\F^n=\{(x_1,x_2,\ldots,x_n)\mid x_1,x_2,\ldots,x_n\in\F\}$. We can define two operations on $\F^n$ which we call "vector addition" which is a map $\F^n\times\F^n\ra\F^n$, and "scaling" which is a map $\F\times\F^n\ra\F^n$ as follows.
+
+        For $v=(x_1,x_2,\ldots,x_n), w=(y_1,y_2,\ldots,y_n)\in\F^n$, and $c\in\F$ we define:
+        \begin{align*}
+            \Al{v+w}{(x_1,x_2,\ldots, x_n) + (y_1,y_2,\ldots,y_n)}{(vector addition)}
+            &=(x_1+y_1,x_2+y_2,\ldots,x_n+y_n) &\\
+            \Al{cv}{c(x_1,x_2,\ldots,x_n)}{(scaling)}
+            &=(cx_1,cx_2,\ldots,cx_n) &
+        \end{align*}
+    }
+
+    \tcbcnt{theorem}{12}
+    \newt[$\F^n$]{thm13}{
+        Let $\F$ be a field. Set $0=(0,0,\ldots,0)$. For any $v,w,u\in\F^n$ and $a,b\in\F$ we have:
+        \begin{enumerate}
+            \item $v+w=w+v$.
+            \item $v+(w+u)=(v+w)+u$.
+            \item $a(v+w)=av+aw$.
+            \item $(a+b)v=av+bv$.
+            \item $(ab)v=a(bv).$
+            \item $1v=v$.
+            \item $0+v=v$.
+            \item For every $v\in V$ there exists $w\in V$ so that $v+w=0$.
+        \end{enumerate} 
+    }
+
+    \envbreak
+    \newd[Vector Space]{def21}{
+        Let $\F$ be a field. A vector space $V$ over $\F$ is a non-empty set, containing a special element 0, with two operatoins $V\times V\ra V$ (called vector addition) and $\F\times V\ra V$ (called scaling) so that for all $v,w,u\in V$ and $a,b\in\F$:
+        \begin{enumerate}
+            \item $v+w=w+v$.
+            \item $v+(w+u)=(v+w)+u$.
+            \item $a(v+w)=av+aw$.
+            \item $(a+b)v=av+bv$.
+            \item $(ab)v=a(bv).$
+            \item $1v=v$.
+            \item $0+v=v$.
+            \item For every $v\in V$ there exists $w\in V$ so that $v+w=0$.
+        \end{enumerate}
+        \newn{
+            $P(\F), P_n(\F)$ and $\F^n$ are vector spaces.
+        }
+    }
+
+    \envbreak
+    \newd[Matrix Cont.]{def22}{
+        Let $\F$ be a field. An $m\times n $ \tbf{matrix $M$ with entries in $\F$} is a rectangular array of elements of $\F$ consisting of $m$ rows and $n$ columns.
+
+        We denote the entry in the $i$ row and $j$ column of a matrix $m$ by $m_{ij}$.
+
+        The set of all $m\times n$ matrices with coefficients in $\F$ is denoted by $\mathcal{M}_{m\times n}(\F)$.
+
+        For example, a $2\times3$ matrix looks like $\begin{pmatrix}m_{11}&m_{12}&m_{13}\\m_{21}&m_{22}&m_{23}\end{pmatrix}\in\mathcal{M}_{2\times3}(\F)$, wile a $3\times 2$ matrix $N$ looks like $\begin{pmatrix}n_{11}&n_{12}\\n_{21}&n_{22}\\n_{31}&n_{32}\end{pmatrix}\in\mathcal{M}_{3\times2}(\F)$.
+
+        \newn{
+            $\mathcal{M}_{m\times n}(\F)$, with pointwise addition and scaling is a vector space over $\F$;
+        }
+    }
+
+    \newco[Vector Space]{co2}{
+        Let $\F$ be a field, and $V$ a vector space over $\F$. THen for any $v,w,u\in V$ and $a\in\F$ we have:
+        \begin{enumerate}
+            \item If $v+w=v+u$, then $w=u$.
+            \item If $a\neq 0$ and $av=aw$, then $v=w$.
+            \item The element $0\in V$ is unique.
+            \item Additive inverses in $V$ are unique. (This means that for each $v\in V$ there is only one element $w\in V$ which satisfies the condition of Axiom 8.)
+            \item $(-a)v=-(av)$. In particupar $(-1)v=-v$.
+            \item $0v=0$.
+            \item $a0=0$.
+        \end{enumerate}
+    }
+
+    \newd[Subspace]{def23}{
+        Let $\F$ be a field and $V$ a vector space over $\F$. We say that a subset $W\subseteq V$ is \tbf{a subspace of} $V$ if $W$ is also a vector space over $|F$ using the same operations defined in $V$.
+
+        \newn{
+            $P_n(\F)$ is a subspace of $P(\F)$.
+            
+            $P_n(\F)$ is a subspace of $P_m(\F)$ if $n<m\in\N$. 
+        }
+    }
+
+    \tcbcnt{theorem}{18}
+    \newt[Subspace]{thm19}{
+        Let $V$ be a vector space over a field $\F$. A \tbf{non-empty} subset $W\subseteq V$ is a subspace of $V$ if and only if 
+
+        \begin{enumerate}
+            \item For all $v,w\in W$ we have $v+w\in W$.
+            \item For all $v\in W$ and $c\in \F$ we have $cv\in W.$
+        \end{enumerate}
+    }
+
+    \newd[Trivial / Non-Trivial Subspace]{def24}{
+        Let $V$ be a vector space over a field $\F$. The subspaces $\{0\}$ and $V$ are called the \tbf{trivial subspaces} of $V$. Any other subspace $W$ of $V$ is called a \tbf{non-trivial subspace of} $V$.
+
+        In particular, we say that a subspace $W$ is a non-trivial subspace of $V$ if $W\neq\{0\}$ and $W\neq V$.
+    }
+}
+
+\newpage
+\newch[Bases and Dimension]{ch4}{
+    \newd[Linear Combinatoin of Vectors]{def25}{
+        Let $V$ be a vector space over $\F$, and $v_1,v_2,\ldots,v_k\in V$. A vector of the form $a_1 v_1 + a_2 v_2 +\cdots + a_k v_k \in V$ is called a linear combination of the vectors $v_1,v_2,\ldots, v_k$.
+    }
+
+    \newd[Span]{def26}{
+        Let $V$ be a vector space over $\F$ and $S\subseteq V$. We define the \tbf{span of} $S$, denoted $\vspan S$, as follows:
+        \begin{enumerate}
+            \item If $S=\varnothing$ is empty, then $\vspan S=\{0\}$.
+            \item Otherwise, $\vspan S=\{a_1 v_1 + a_2 v_2 +\cdots + a_k v_k | a_i\in\F v_i \in S\}$ is the set of all possible linear combinations of vectors from $S$.
+        \end{enumerate}
+    }
+
+    \newt[Span as Subspace]{thm20}{
+        Let $V$ be a vector space over $\F$ and $S\subseteq V$ be \tbf{any} subset of vectors. Then the subset $\vspan S\subseteq V$ is a subspace of $V$.
+    }
+
+    \newd[$S$ spans $V$]{def27}{
+        Let $V$ be a vector space over $\F$. We say that a subset $S\subseteq V$ is \tbf{a spanning set for} $V$ (or "$S$ \tbf{spans} $V$") if $V=\vspan S$.
+    }
+
+    \envbreak
+    \newd[Linearly Independnet]{def28}{
+        Let $V$ be a vector space over $\F$. We say that a set $S$ is \tbf{linearly independent} if for any vectors $v_1,v_2,\ldots,v_k\in S$: \[c_1v_1+c_2v_2+\cdots+c_kv_k=0\implies c_1=0,c_2=0,\ldots,c_k=0.\] Otherwise, we say that $S$ is \tbf{linearly dependent}.
+    }
+    \newd[Basis]{def29}{
+        Let $V$ be a vector space over $\F$. A subset $\beta\subseteq V$ is called a \tbf{basis} if:
+        \begin{enumerate}
+            \item $\beta$ spans $V$
+            \item $\beta$ is linearly independent.
+        \end{enumerate}
+        \newn{
+            Vector space over $\F$ also has basis.
+
+            Finite spanning set for $V$ also contains basis for $V$.
+        }
+        \newm{
+            Let $\F$ be a field.
+            \begin{enumerate}
+                \item The set $\{e_1,e_2,\ldots,e_n\}$ is a basis for $\F^n$.
+                \item The set $\{E_{ij}|1\leq i\leq m, 1\leq n\}$ is a basis for $\mathcal{M}_{m\times n}(\F)$.
+                \item The set $\{1,x,x^2,x^3,\ldots\}$ is a basis for $P(\F)$.
+                \item The set $\{1,x,x^2,x^3,\ldots,x^n\}$ is a basis for $P_n(\F)$.
+            \end{enumerate}
+        }
+    }
+    \tcbcnt{theorem}{22}
+    \newt[Unique Expression from Basis]{thm23}{
+        Let $V$ be a vector space over $\mathbb{F}$ and $\beta$ a basis of $V$. Then any $\mathbf{v} \in V$ has a unique expression
+        $$
+        \mathbf{v}=\sum_{i=1}^n a_i \mathbf{v}_i
+        $$
+        where $\mathbf{v}_i \in \beta$ and $a_i \in \mathbb{F}$.
+    }
+    \newt[The Replacement Theorem]{thm24}{
+        Suppose that $\beta=\{\mathbf{v}_1,\mathbf{v}_2,...,\mathbf{v}_n\}$ is a basis for $V$ and $I=\left\{\mathbf{w}_1,\mathbf{w}_2,\ldots,\mathbf{w}_k\right\}$ an independent subset of $V.$ Then for any $i\in \{ 1, ..., k\} $, we can obtain a new basis by replacing $i$ elements of $\beta$ with
+        $\{\mathbf{w}_1,\ldots,\mathbf{w}_i\}.$
+        So after relabelling the elements* $\mathbf{v}_j\in\beta$ we have that the set $\beta_i=\{\mathbf{w}_1,\ldots,\mathbf{w}_i,\mathbf{v}_{i+1},\ldots\mathbf{v}_n\}$ is a basis
+        for $V.$
+
+        \newco{co3}{
+            Suppose that $V$ is a vector space over $\F$ with a finite basis. Suppose that $\beta$ is any basis of $V$ and $I$ is any independent set. Then $|I|\leq |B|$.
+        }
+
+    }
+    \newt[Size of Bases]{thm25}{
+        Let $V$ be a vector space over a field $\F$. If $V$ has a finite basis, then all bases of $V$ have the same size.
+    }
+    \newd[Dimension]{def30}{
+        Let $V$ be a vector space over $\F$ with a finite basis. We define the \tbf{dimension of} $V$ to be the size of a basis for $V$.
+
+        In this case, we say that $V$ \tbf{is finite dimensional}. Otherwise, we say that $V$ is infinite dimenisonal.
+        \newn{
+            \begin{enumerate}
+                \item $\dim \F^n=n$.
+                \item $\dim \mathscr{M}_{m\times n}(\F)=mn.$
+                \item $\dim P_n(\F)=n+1.$
+                \item $P(\F)$ is infinite dimensional.
+            \end{enumerate}
+
+
+        }
+    }
+    \newco{co4}{
+        Let $V$ be a finite dimensional vector space over $\F$. $S$ any spanning set for $V$, $I$ any independent set in $V$, and $\beta$ any basis. Then \[|I|\leq |\beta|\leq |S|.\]
+    }
+
+}
+
+\end{document}
