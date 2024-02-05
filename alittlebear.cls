@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{alittlebear}[2024/01/30 alittlebear]
+\ProvidesClass{alittlebear}[2024/02/01 alittlebear]
 
 %settings
 \def\filename{\headername \headernum} %name of file
@@ -40,7 +40,6 @@
 
 
 %indent and format
-\RequirePackage{mathrsfs}
 \newcommand{\ind}[1][5]{\hspace*{#1mm}}
 \newcommand{\unind}[1][5]{\hspace*{-#1mm}}
 \newcommand{\explain}[2][20]{\\\ind[#1] {#2}}
@@ -71,8 +70,24 @@
 %multlined environment inside align
 \RequirePackage{mathtools}
 
-\usepackage{breqn}
 
+
+\RequirePackage{breqn}
+
+\RequirePackage{changepage} % for adjustwidth environment
+\newcommand{\indenv}[2][1]{
+    \begin{adjustwidth}{#1cm}{}
+        #2
+    \end{adjustwidth}
+}
+
+\newcommand{\np}{\newpage}
+\newcommand{\ds}{\displaystyle}
+
+\RequirePackage{mathrsfs}
+\DeclareMathOperator{\vspan}{span}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\im}{im}
 
 
 %number line in * environment, add \lebel{} and refer as \eqref{}
@@ -112,6 +127,11 @@
     enforce breakable, left=5mm,
     colback=yellow!3!white, colframe=orange!20!white,
     after upper={\hfill$\smiley$}
+}
+\newtcolorbox{tbox}[2][]{
+    colbacktitle=orange!10!white,
+colback=orange!10!white,coltitle=orange!70!black,
+title={\centering#2},fonttitle=\bfseries,#1
 }
 \newtheorem*{hint}{Hint}
 \tcolorboxenvironment{hint}{
@@ -213,6 +233,7 @@
     },interior engine=empty,
     },
     fonttitle=\bfseries,
+    after = {\tcbcnt{question}{0}}
 }{exercise}
 \newtcbtheorem{unit}{Unit}{
     enforce breakable, enhanced, 
@@ -262,11 +283,11 @@
 }{chapter}
 
 
-\newcommand{\newq}[3][]{\begin{question}{#1}{q#2}#3\end{question}}
-\newcommand{\newe}[3][]{\begin{exercise}{#1}{e#2}#3\end{exercise}}
+\newcommand{\newq}[3][]{\begin{question}{#1}{#2}#3\end{question}}
+\newcommand{\newe}[3][]{\begin{exercise}{#1}{#2}#3\end{exercise}}
 \newcommand{\newu}[3][]{\begin{unit}{#1}{#2}#3\end{unit}}
-\newcommand{\newch}[3][]{\begin{chapter}{#1}{ch#2}#3\end{chapter}}
-\newcommand{\newd}[3][]{\begin{definition}{#1}{d#2}#3\end{definition}}
+\newcommand{\newch}[3][]{\begin{chapter}{#1}{#2}#3\end{chapter}}
+\newcommand{\newd}[3][]{\begin{definition}{#1}{#2}#3\end{definition}}
 \newcommand{\newl}[3][]{\begin{lemma}{#1}{#2}#3\end{lemma}}
 \newcommand{\newcl}[3][]{\begin{claim}{#1}{#2}#3\end{claim}}
 \newcommand{\newco}[3][]{\begin{corollary}{#1}{#2}#3\end{corollary}}
@@ -283,7 +304,6 @@
 
 
 
-\DeclareMathOperator{\vspan}{\text{span}}
 % Useful commands
 \newcommand{\T}[1]{\text{#1}}
 \newcommand{\Al}[3]{#1 &=#2 &\text{#3}&&\\}
@@ -338,6 +358,8 @@
 \newcommand{\abs}[1]{\left|#1\right|}
 \newcommand{\curbra}[1]{\left\{#1\right\}} %set {}
 \newcommand{\func}[3]{#1: #2 \rightarrow #3}
+\newcommand{\norm}[1]{\left|\left|#1\right|\right|}
+\DeclareMathOperator{\sgn}{sgn}
 
 
 

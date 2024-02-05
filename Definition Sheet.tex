@@ -498,7 +498,7 @@
     }
 
     \newt{thm27}{
-        Let $V$ e a finite dimensional vector space over $\F$ and $\beta=\{v_1,ldots,v_n\}$ a basis of $V$. A linear map $T: V\ra W$ is uniquely determined by the values $T(v_1),T(v_2),\ldots,T(v_n)\in W$.
+        Let $V$ e a finite dimensional vector space over $\F$ and $\beta=\{v_1,\ldots,v_n\}$ a basis of $V$. A linear map $T: V\ra W$ is uniquely determined by the values $T(v_1),T(v_2),\ldots,T(v_n)\in W$.
     }
 
     \newco[Extending by Linearity]{co5}{
@@ -533,6 +533,134 @@
 
     \newt[The Dimension Theorem]{thm30}{
         Let $V,W$ be finite dimenisonal vector spaces over $\F$. If $T:V\ra W$ linear, then $$\dim V=\dim N(T)+\dim \operatorname{im}(T)$$.
+    }
+
+    \newd[$\mathcal{L}(V,W)$]{def33}{
+        Let $V,W$ be vector spaces over a field $\F$. We denote by $\mathcal{L}(V,W)=\{T:V\to W\mid T \T{ is linear}\}$ the set of all linear transformations from $V$ to $W$.
+        
+        We define addition and scaling of transformations by:
+
+        \begin{align*}
+            \Al{(T+S)(v)}{T(v)+S(v)}{(we can add $T(v),S(v)\in W$)}
+            \Al{(cT)(v)}{cT(v)}{(we can scale the vector $T(v)\in W$ by $c\in\F$)}
+        \end{align*}
+    }
+
+    \newt{thm31}{
+        Let $V,W$ be vector spaces over a field $\F$. If $S,T\in\mathcal{L}(V,W),$ and $c\in\F$ then $T+S, cT\in\mathcal{L}(V,W)$.
+    }
+
+    \newt{thm32}{
+        Let $V,W$ be vector spaces over a field $\F$. \begin{enumerate}
+            \item The set $\mathcal{L}(V,W)$ is a vector space over $\F$.
+            \item If $\dim V=n,\dim W=m,$ then $\dim \mathcal{L}(V,W)=nm$. 
+        \end{enumerate}
+    }
+
+    \newd[Invertibility]{def34}{
+        Let $A,B$ be sets and $f: A\to B$ be a function.
+        \begin{enumerate}
+            \item We say that $f$ is injective if for all $x,y\in A, f(x)=f(y)\implies x=y.$
+            \item We say that $f$ is surjective if $\im f = f(A) = B$.
+            \item We say that $f$ is bijective if it is both injective and surjective.
+            \item We say that $f$ is \tbf{invertible}, if there exists a function $g: W\to V$ so that $g\circ f=I_A:A\to A$ and $f\circ g=I_B:B\to B$.
+
+            In this case we call the map $g$ the \tbf{inverse} of $f$ and denote it by $f^{-1}$.
+        \end{enumerate}
+    }
+
+    \newt{thm33}{
+        Let $V,W$ be vector spaces over $\F$. If $T: V\to W$ is linear and bijective, then the inverse $T^{-1}: W\to V$ is also linear.
+    }
+
+    \newd[Isomorphism]{def35}{
+        Let $V,W$ be vector spaces over the field $\F$. We say that a linear map $T: V\to W$ is an \tbf{isomorphism} if it is bijective.
+
+        We say that $V$ is \tbf{isomorphic to} $W$, and write $V\simeq W$, if there exists an isomorphism $T:V\to W$.
+    }
+
+    \newt{thm34}{
+        Let $V,W$ be vector spaces over $\F$ and $T: V\to W$ be linear. Then $T$ is injective if and only if $N(T)+\{0_v\}$.
+    }
+
+    \newt{thm35}{
+        Let $V,W$ be finite dimensional vector spaces over $\F$. Then $V\simeq W$ if and only if $\dim V=\dim W$.
+    }
+
+    \newt{thm36}{
+        Let $V,W$ be finite dimensional vector spaces over the field $\F$.
+
+        If $T: V\to W$ is linear and $\dim V=\dim W$, then the following are equivalent:
+
+        \begin{enumerate}
+            \item $T$ is injective.
+            \item $T$ is surjective.
+            \item $T$ is an isomorphism.
+        \end{enumerate}
+    }
+
+    \newt{thm37}{
+        The maps $R_\theta, \T{proj}_L,\R_L:\R^2\ra\R^2$ are linear.
+    }
+
+    \newt{thm38}{
+        The maps $R_{\theta, L}, \T{proj}_L, R_P:\R^3\to\R^3$ are linear.
+    }
+
+}
+
+\newpage
+\newch[Coordinates]{ch6}{
+    \newt{thm39}{
+        Let $A\in\mathscr{M}_{m\times n}(\F)$. Define $T_A:\F^n\to \F^m$ by $T_A(x)=Ax$.
+        \begin{enumerate}
+            \item The map $T_A$ is linear.
+            \item The map $F:\mathscr{M}_{m\times n}(\F)\to\mathcal{L}(\F^n,\F^m)$ given by $F(A)=T_A$ is an isomorphism of vector spaces. That is, every linear map $T:\F^n\to \F^m$ is given by matrix multiplication for some matrix $A$.
+        \end{enumerate}
+    }
+
+    \newd{def36}{
+        Let $V$ be a finite dimensional vector space over $\F$. An \tbf{ordered basis} for $V$ is a basis $\beta$, together with a \tbf{fixed} order for listing its elements: $\beta=\{v_1,\ldots,v_n\}$.
+    }
+
+    \newt{thm40}{
+        Let $V$ be a vctor space over $\F$ of dimension $n$, and $\beta=\{v_1,\ldots,v_n\}$ a basis of $V$. The map $\phi_{\beta}:V\to \F^n$ defined above is an isomorphism of vector spaces.
+
+        We will denote by $[v]_\beta$ the element $\phi_\beta(v)$. I.e. $\phi_\beta(v)=[v]_\beta$.
+
+        We will call a choice of basis on $V$, together with the isomorphism $\phi_beta:V\to \F^n$ a ``\tbf{coordinate system}'' on $V$.
+
+    }
+
+    \newd{def37}{
+        Let $V,W$ be finite dimensional vector spaces over $\F$. Let $\beta=\{v_1,\ldots,v_n\}$ be a basis of $V$ and $\gamma=\{w_1,\ldots,w_m\}$ a basis of $W$. For $T\in\mathcal{L}(V,W)$ we define the matrix $[T]_\beta^\gamma\in\mathscr{L}(\F^n,\F^m)$ as follows:
+        \begin{enumerate}
+            \item The columns of $[T]_\beta^\gamma$ are given by: $[T(v_1)]_\gamma,\ldots,[T(v_n)]_\gamma$.Alternatively: we can express $T(v_j)\in W$ using the basis $\gamma$ to obtain an expression $T(v_j)=\ds\sum_{i=1}^m A_{ij}w_i$. We then define $\bra{[T]_\beta^\gamma}_{ij}=A_{ij}$.
+        \end{enumerate}
+
+        When $T: V\to V$ we denote by $[T]_\beta=[T]_beta^\beta$.
+    }
+
+    \newt{thm41}{
+        Let $V,W$ be finite dimensional vector spaces over $\F$, $\beta=\{v_1,\ldots,v_n\}$ a basis of $V$, and $\gamma=\{w_1,\ldots,w_m\}$ a basis of $W$. 
+
+        The map $\phi_\beta^\gamma: \mathcal{L}(V,W)\to\mathscr{M}_{m\times n}(\F)$ given by $\phi_\beta^\gamma(T)=[T]_\beta^\gamma$ is an isomorphism of vector spaces.
+    }
+
+    \newt{thm42}{
+        Let $V,W,X$ be finite dimensional vector spaces over $\F$. Let $\beta=\{v_1,\ldots,v_n\}$ be a basis of $V$, $\gamma=\{w_1,\ldots,w_m\}$ a basis of $W$, and $\delta=\{x_1,\ldots,x_p\}$ a basis of $X$. 
+
+        For all $T\in\mathscr{L}(V,W)$ and $S\in\mathscr{L}(W,X)$ we have that \[[S\circ T]_\beta^\delta=[S]_gamma^\delta[T]_\beta^\gamma.\] In other words, when using compatible coordinate systems, the composition of linear transformations corresponds to matrix multiplication.
+    }
+
+    \newt{thm43}{
+        Let $V,W$ be finite dimensional vector spaces over $\F$, $T: V\to W$ be a linear map, $\beta=\{v_1,\ldots,v_n\}$ a basis of $V$, and $\gamma=\{w_1,\ldots,w_m\}$ a basis of $W$. Then $T$ is invertible if and only if $[T]_\beta^\gamma$ is invertible.
+
+        Moreover, we have \[[T^{-1}]_\gamma^\beta=\bra{[T]_\beta^\gamma}^{-1}\] if $T$ is invertible.
+    }
+
+    \newt{thm44}{
+        Let $V,W$ be finite dimensional vector spaces over a field $\F, \beta=\{v_1,\ldots,v_n\}$ a basis of $V$, and $\gamma=\{w_1,\ldots,w_m\}$ a basis of $W$. Then we have \[[T]_\beta^\gamma[v]_\beta=[T(v)]_\gamma\] for all $v\in V$.
     }
 }
 
