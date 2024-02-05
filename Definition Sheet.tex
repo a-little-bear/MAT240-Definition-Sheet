@@ -253,7 +253,7 @@
         \newn{
             \begin{itemize}
                 \item $x_1=0,x_2=0,\ldots,x_n=0$ is \tbf{\textit{always}} a solution to any homogeneous equation.
-                \item We call this solution the \tbf{\textit{trivial}} solutoin.
+                \item We call this solution the \tbf{\textit{trivial}} solution.
                 \item Any other solution is called a \tbf{\textit{non-trivial}} solution.
             \end{itemize}
         }
@@ -470,6 +470,172 @@
         Let $V$ be a finite dimensional vector space over $\F$. $S$ any spanning set for $V$, $I$ any independent set in $V$, and $\beta$ any basis. Then \[|I|\leq |\beta|\leq |S|.\]
     }
 
+}
+
+\newpage
+
+\newch[Linear Transformations]{ch5}{
+    \newd[Linear Transformation]{d31}{
+        Let $V$ and $W$ be vector spaces over $\F$. A map $T:V\ra W$ is called a \tbf{linear transformation} if:
+        \begin{align*}
+            \Al{T(v+w)}{T(v)+T(w)}{for all $v,w\in V$}
+            \Al{T(cv)}{cT(v)}{for all $v\in V$ and $c\in\F$}
+        \end{align*}
+        \newn{
+            $T(x,y,z)=(2x-4y+z,3x-y+2x)$ is a linear transformation from $\R^3$ to $\R^2$.
+
+            $T(p)=\frac{\D}{\D x}p$ is a linear transformation.
+        }
+    }
+
+    \newt[Properties of Linearity]{thm26}{
+        Let $V,W$ be vector spaces over $\F$.
+        \begin{enumerate}
+            \item If $T:V\ra W$ is linear, then $T(0_v)=0_w$.
+            \item The map $O: V\ra W$ given by $O(v)=0_w$ for all $v\in V$ is linear. This map is called the "zero map."
+            \item The map $I_V:V\ra V$ given by $I_V(v)=v$ for all $v\in V$ is linear. This map is called the "identity map."
+        \end{enumerate}
+    }
+
+    \newt{thm27}{
+        Let $V$ e a finite dimensional vector space over $\F$ and $\beta=\{v_1,\;dpts,v_n\}$ a basis of $V$. A linear map $T: V\ra W$ is uniquely determined by the values $T(v_1),T(v_2),\ldots,T(v_n)\in W$.
+    }
+
+    \newco[Extending by Linearity]{co5}{
+        Let $V,W$ be vector spaces over $\F$, and $\beta=\{v_1,\ldots,v_n\}$ a basis for $V$. Given a list of (not necessarily distinct) vectors $w_1,\ldots, w_n\in W$ there is exactly one linear map $T: V\ra W$ so that $W(v_i)=w_i$.
+
+        This map is defined for all $v\in V$ as follows. Writing $v=\displaystyle\sum_{i=1}^n a_i v_i$, we then set $T(v)=\displaystyle\sum_{i=1}^n a_i w_i$.
+
+        This process is called "extending by linearity".
+    }
+
+    \newt[Composition of Linear Maps]{thm28}{
+        Let $V,W,X$ be vector spaces over $\F$. If $T:V\ra W$ and $S:W\ra X$ are linear maps, then the composition $S\circ T:V\ra X$ is linear.
+    }
+
+    \envbreak
+
+    \newt[Null Space / Image]{thm29}{
+        Let $V,W$ be vector spaces over $\F$ and $T:V\ra W$ a linear transformation. The sets: 
+        \[N(T)=\{v\in V\mid T(v)=0\}\subseteq V\]
+        \[\operatorname{im}(T)=\{w\in W\mid w=T(v)\text{ for some }v\in V\}\subseteq W\]
+
+        are subspaces of $V,W$ respectively.
+
+        The subspace $N(T)$ is called the \tbf{null space of} $T$.
+
+        The subspace $\operatorname{im}(T)$ is called the \tbf{image of} $T$.
+    }
+
+    \newd[rank]{def32}{
+        Let $V,W$ be vector spaces over $\F$ and $T:V\ra W$ linear. We define the \tbf{rank} of $T$ by $\operatorname{rank} T=\dim \operatorname{im}(T)$.
+    }
+
+    \newt[The Dimension Theorem]{thm30}{
+        Let $V,W$ be finite dimenisonal vector spaces over $\F$. If $T:V\ra W$ linear, then $$\dim V=\dim N(T)+\dim \operatorname{im}(T)$$.
+    }
+}
+
+\newpage
+
+\newch[Matrix Algebra (Appendix A)]{ch6}{
+    \newd[Matrix Multiplication]{def86}{
+        Let $A\in\mathscr{M}_{m\times n}(\F)$ and $B\in\mathscr{M}_{n\times k}(\F)$. We define their product $AB\in\mathscr{M}_{m\times k}(\F)$ as follows: for $i\in\{1,\ldots,m\}$ and $j\in\{1,\ldots,k\}$ the $ij$-entry of the product $AB$ is given by 
+        
+        \[(AB)_{ij}=\sum_{l=1}^n A_{il}B_{lj}.\]
+
+        \newn{
+            $AB\neq BA$.
+        }
+    }
+
+    \newd[Special Matrices]{def87}{
+        For each $n,m\in\N$ we define the following matrices:
+        \begin{enumerate}
+            \item $O_{m,n}\in\mathscr{M}_{m\times n}(\F)$ - the matrix consisting of all 0's. In other words $(O_{m,n})_{i,j}=0$ for all $i\in\{1,\ldots,m\}$ and $j\in\{1,\ldots,n\}$. 
+            \item $I_n\in\mathscr{M}_{n\times n}(\F)$ - the matrix with 1's on the diagonals, and 0 in all other entries. In other words 
+            
+            $$(I_n)_{ij}=\begin{cases}1&\text{if }i=j\\0&\text{if }i\neq j\end{cases}$$\\
+        \end{enumerate}
+
+        \newm{
+            $$O_{2,3}= \begin{pmatrix}0&0&0\\0&0&0\\\end{pmatrix}$$
+        
+            $$I_3=\begin{pmatrix}1&0&0\\0&1&0\\0&0&1\\\end{pmatrix}$$
+        }
+    }
+
+    
+
+    \newt{thm124}{
+        Let $\mathbb{F}$ be a field, $A, A_1, A_2 \in \mathscr{M}_{\mathbf{m} \times \mathbf{n}}(\mathbb{F}), B, B_1, B_2 \in \mathcal{M}_{n \times k}(\mathbb{F}), C \in \mathcal{M}_{k \times p}(\mathbb{F})$ and $c \in \mathbb{F}$.
+        
+        1. $A(B C)=(A B) C$
+        
+        2. $\left(A_1+A_2\right) B=A_1 B+A_2 B$
+        
+        3. $A\left(B_1+B_2\right)=A B_1+A B_2$
+        
+        4. $I_m A=A=A I_n$
+        
+        5. $\mathrm{O}_{r m} A=\mathrm{O}_{r n}$ for any 
+        $r \in \mathbb{N}$.
+        
+        6. $A(c B)=c(A B)=\left(c \mathrm{I}_m\right) A B=A B\left(c \mathrm{I}_k\right)=A\left(c \mathrm{I}_n\right) B$.
+    }
+
+    \newd[Invertibility]{def88}{
+        Let $A\in\mathscr{M}_{n\times n}(\F)$. We say that $A$ is \tbf{invertible} if there exists a matrix $B\in\mathscr{M}_{n\times n}(\F)$ so that $AB=I_n=BA$. 
+    }
+
+    \newt{thm125}{
+        Let $A,B\in\mathscr{M}_{n\times n}(\F)$. 
+        \begin{enumerate}
+            \item If $A$ is invertible, then the inverse of $A$ is unique.
+            \item If $A$ is invertible, then $A^{-1}$ is also invertible.
+            \item If $A$ and $B$ are invertible, then $AB$ is invertible.
+            \item $I_n$ is invertible.
+            \item If $AB=I_n$, then $A$ is invertible and $B=A^{-1}$.
+        \end{enumerate}
+    }
+
+    \newd[$A^t$]{def89}{
+        Let $A\in\mathscr{M}_{m\times n}(\F)$. We define the matrix $A^t\in\mathscr{M}_{n\times m}(\F)$  by:
+
+        \[(A^t)_{ij}=A_{ji}.\]
+
+        In other words, to obtain $A^t$ we "swap the rows and columns of A."
+    }
+
+    \newd[Symmetric]{def90}{
+        We say that $A\in\mathscr{M}_{n\times n}(\F)$ is \tbf{symmetric} if $A^t=A$. We denot ethe set of all symmetric matrices by \tbf{Sym}$_n(\F)$.
+
+        We say that $A\in\mathscr{M}_{n\times n}(\F)$ is \tbf{skew-symmetric} if $A^t=-A$. We denote the set of all skew-symmetric matrices by \tbf{Sk}$_n(\F)$.
+    }
+
+    \newt{thm126}{
+        Let $A, B \in \mathscr{M}_{\mathbf{m} \times \mathbf{n}}(\mathbb{F}), C \in \mathscr{M}_{n \times k}(\mathbb{F})$ and $c \in \mathbb{F}$.
+        
+        1. $(A+B)^t=A^t+B^t$
+        
+        2. $(c A)^t=c A^t$
+        
+        3. $\left(A^t\right)^t=A$
+        
+        4. $(A C)^t=C^t A^t$.
+        
+        5. In the case that $m=n$, we also have that if $A \in \mathscr{M}_{\mathbf{n} \times \mathbf{n}}(\mathbb{F})$ is invertible, then $A^t \in \mathscr{M}_{\mathbf{n} \times \mathbf{n}}(\mathbb{F})$ is invertible and $\left(A^t\right)^{-1}=\left(A^{-1}\right)^t$.
+    }
+
+    \newd[Diagonal and Triangular]{def91}{
+        We say that $A$ is \tbf{diagonal} if $A_{ij}=0$ for all $i\neq j$. 
+
+        Let $A\in\mathscr{M}_{n\times n}(\F)$. We say that $A$ is \tbf{upper triangular} if $A_{ij}=0$ for all $i>j$. This means that all entries below the diagonal of $A$ must be 0.
+
+        Similarily, we say that $A$ is \tbf{lower triangular} if $A_{ij}=0$ for all $i<j$. This means that all entries above the diagonal of $A$ must be 0.
+
+        We say that $A$ is \tbf{strictly upper-triangular} if $A_{ij}=0$ for all $i\geq j$. 
+    }
 }
 
 \end{document}
