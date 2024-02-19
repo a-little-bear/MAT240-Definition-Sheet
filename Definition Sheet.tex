@@ -1,11 +1,17 @@
-\documentclass[12pt]{alittlebear}
+\documentclass[11pt, white, night, 1in]{alittlebear}
 
-\def\name{Joseph Siu}
 \def\course{MAT240: Algebra I}
 \def\headername{Definition Sheet}
-\def\headernum{}
+\def\name{Joseph Siu}
+\def\info{Most of the numbers are correct. This sheet also does not include the examples.}
+\def\logo{clsfiles/qunwang}
+
+\usepackage{clsfiles/mat240}
+
 
 \begin{document} 
+
+\coverpage
 
 \newch[Fields and Polynomials]{ch1}{
     
@@ -666,7 +672,7 @@
 
 \newpage
 
-\newch[Matrix Algebra (Appendix A)]{ch6}{
+\newch[Matrix Algebra (Appendix A)]{ch999}{
     \newd[Matrix Multiplication]{def86}{
         Let $A\in\mathscr{M}_{m\times n}(\F)$ and $B\in\mathscr{M}_{n\times k}(\F)$. We define their product $AB\in\mathscr{M}_{m\times k}(\F)$ as follows: for $i\in\{1,\ldots,m\}$ and $j\in\{1,\ldots,k\}$ the $ij$-entry of the product $AB$ is given by 
         
@@ -732,7 +738,7 @@
 
         \[(A^t)_{ij}=A_{ji}.\]
 
-        In other words, to obtain $A^t$ we "swap the rows and columns of A."
+        In other words, to obtain $A^t$ we ``swap the rows and columns of A."
     }
 
     \newd[Symmetric]{def90}{
