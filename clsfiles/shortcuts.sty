@@ -1,6 +1,80 @@
 \ProvidesPackage{shortcuts}
 \NeedsTeXFormat{LaTeX2e}
 
+
+
+% Letters
+\newcommand{\al}{\alpha}
+\newcommand{\Al}{\Alpha}
+
+\newcommand{\be}{\beta}
+\newcommand{\Be}{\Beta}
+
+\newcommand{\ga}{\gamma}
+\newcommand{\Ga}{\Gamma}
+\newcommand{\vGa}{\varGamma}
+
+\newcommand{\ep}{\epsilon}
+\newcommand{\vep}{\varepsilon}
+\newcommand{\Ep}{\Epsilon}
+
+\newcommand{\de}{\delta}
+\newcommand{\De}{\Delta}
+\newcommand{\vDe}{\varDelta}
+
+\newcommand{\si}{\sigma}
+\newcommand{\Si}{\Sigma}
+\newcommand{\vSi}{\varSigma}
+
+\newcommand{\om}{\omega}
+\newcommand{\Om}{\Omega}
+\newcommand{\vOm}{\varOmega}
+
+\newcommand{\ze}{\zeta}
+\newcommand{\Ze}{\Zeta}
+
+\newcommand{\et}{\eta}
+\newcommand{\Et}{\Eta}
+
+\renewcommand{\th}{\theta}
+\newcommand{\vth}{\vartheta}
+\newcommand{\Th}{\Theta}
+\newcommand{\vTh}{\varTheta}
+
+\newcommand{\io}{\iota}
+\newcommand{\Io}{\Iota}
+
+\newcommand{\ka}{\kappa}
+\newcommand{\Ka}{\Kappa}
+
+\newcommand{\la}{\lambda}
+\newcommand{\La}{\Lambda}
+\newcommand{\vLa}{\varLambda}
+
+\newcommand{\rh}{\rho}
+\newcommand{\vrh}{\varrho}
+
+\newcommand{\ph}{\phi}
+\newcommand{\vph}{\varphi}
+\newcommand{\Ph}{\Phi}
+\newcommand{\vPh}{\varPhi}
+
+\newcommand{\ps}{\psi}
+\newcommand{\Ps}{\Psi}
+\newcommand{\vPs}{\varPsi}
+
+\newcommand{\ta}{\tau}
+
+\newcommand{\ch}{\chi}
+\newcommand{\Ch}{\Chi}
+
+\newcommand{\vpi}{\varpi}
+
+
+
+
+
+
 % Document
 \newcommand{\np}{\newpage}
 %indent and format, Abounded commands, use indenv instead
@@ -39,7 +113,9 @@
 \newcommand{\ie}{\text{ i.e. }}
 \newcommand{\eg}{\text{ e.g. }}
 \newcommand{\alt}[1]{\intertext{#1}}
-\newcommand{\Al}[3]{#1 &=#2 &\text{#3}&&\\}
+\newcommand{\Aleq}[3]{#1 &=#2 &\text{#3}&&\\}
+\newcommand{\Algeq}[3]{#1 &\ge #2 &\text{#3}&&\\}
+\newcommand{\Alleq}[3]{#1 &\le #2 &\text{#3}&&\\}
 \newcommand{\T}[1]{\text{#1}}
 
 % Math Operators / Commands
@@ -64,14 +140,9 @@
 \newcommand{\Ra}{\Rightarrow}
 \newcommand{\?}{\stackrel{?}{=}}
 \newcommand{\is}{\equiv}
-\newcommand{\al}{\alpha}
-\newcommand{\be}{\beta}
-\newcommand{\ga}{\gamma}
-\newcommand{\Ga}{\Gamma}
-\newcommand{\ep}{\varepsilon}
-\newcommand{\de}{\delta}
-\newcommand{\sig}{\sigma}
-\newcommand{\Sig}{\Sigma}
+\newcommand{\sse}{\subseteq}
+\newcommand{\newop}[2]{\newcommand{#1}{\text{#2}}}
+
 \newcommand{\p}{\partial}
 \newcommand{\injective}{\hookrightarrow}
 \newcommand{\surjective}{\twoheadrightarrow}
@@ -99,3 +170,30 @@
 {
     \par
 }
+
+
+\let\over\undefined
+% arrows and stacks
+\newcommand{\over}[2]{\overset{#1}{#2}}
+\newcommand{\under}[2]{\underset{#2}{#1}}
+\newcommand{\overunder}[3]{\overset{#1}{\underset{#3}{#2}}}
+
+
+\RequirePackage{xintexpr}
+\newcommand{\Dar}[1][1]{
+    {\left\Downarrow\vbox to \dimexpr0.5cm*(#1){}\right.\kern-\nulldelimiterspace}
+}
+\newcommand{\dar}[1][1]{
+    {\left\downarrow\vbox to \dimexpr0.5cm*(#1){}\right.\kern-\nulldelimiterspace}
+}
+\newcommand{\Uar}[1][1]{
+    {\left\Uparrow\vbox to \dimexpr0.5cm*(#1){}\right.\kern-\nulldelimiterspace}
+}
+\newcommand{\uar}[1][1]{
+    {\left\uparrow\vbox to \dimexpr0.5cm*(#1){}\right.\kern-\nulldelimiterspace}
+}
+
+
+
+\RequirePackage[normalem]{ulem}
+\newcommand{\crossout}[1]{\sout{#1}}

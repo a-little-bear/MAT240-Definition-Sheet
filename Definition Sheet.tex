@@ -1,4 +1,4 @@
-\documentclass[11pt, white, night, 1in]{alittlebear}
+\documentclass[11pt, sakura, night, 0.5in]{hw}
 
 \def\course{MAT240: Algebra I}
 \def\headername{Definition Sheet}
@@ -153,7 +153,7 @@
     }
 }
 
-\newpage
+\np
 \tcbcnt{definition}{8}
 \tcbcnt{theorem}{10}
 \newch[Linear Systems]{ch2}{
@@ -266,7 +266,7 @@
     }
 }
 
-\newpage
+\np
 \newch[Vector Spaces]{ch3}{
     \newd[Vector Operators]{d18}{
         Given two vectors \tbf{v,w} we define \underline{\tbf{their sum}} \tbf{v+w} using “tip to tail" addition (or the “parallelogram law of addition"). In the diagram in the margin, the vector \tbf{v+w} is diagonal in the parallelogram spanned by v, w that shares its tail with v and w.
@@ -278,7 +278,7 @@
         \begin{itemize}
             \item $0\mathbf{v}=\mathbf{0}.$
             \item If $a>0$, then $a\mathbf{v}$ is a vector pointing in the same direction as v with length scaled by $a$
-            \item If $\alpha<0$, then $\alpha$vis a vector pointing in the opposite direction as v with length scaled by $|\alpha|.$
+            \item If $\alpha<0$, then $\alpha$ is a vector pointing in the opposite direction as v with length scaled by $|\alpha|.$
         \end{itemize}
 
         \newn{
@@ -293,9 +293,9 @@
 
         For $v=(x_1,x_2,\ldots,x_n), w=(y_1,y_2,\ldots,y_n)\in\F^n$, and $c\in\F$ we define:
         \begin{align*}
-            \Al{v+w}{(x_1,x_2,\ldots, x_n) + (y_1,y_2,\ldots,y_n)}{(vector addition)}
+            \Aleq{v+w}{(x_1,x_2,\ldots, x_n) + (y_1,y_2,\ldots,y_n)}{(vector addition)}
             &=(x_1+y_1,x_2+y_2,\ldots,x_n+y_n) &\\
-            \Al{cv}{c(x_1,x_2,\ldots,x_n)}{(scaling)}
+            \Aleq{cv}{c(x_1,x_2,\ldots,x_n)}{(scaling)}
             &=(cx_1,cx_2,\ldots,cx_n) &
         \end{align*}
     }
@@ -388,7 +388,7 @@
     }
 }
 
-\newpage
+\np
 \newch[Bases and Dimension]{ch4}{
     \newd[Linear Combinatoin of Vectors]{def25}{
         Let $V$ be a vector space over $\F$, and $v_1,v_2,\ldots,v_k\in V$. A vector of the form $a_1 v_1 + a_2 v_2 +\cdots + a_k v_k \in V$ is called a linear combination of the vectors $v_1,v_2,\ldots, v_k$.
@@ -478,14 +478,14 @@
 
 }
 
-\newpage
+\np
 
 \newch[Linear Transformations]{ch5}{
     \newd[Linear Transformation]{d31}{
         Let $V$ and $W$ be vector spaces over $\F$. A map $T:V\ra W$ is called a \tbf{linear transformation} if:
         \begin{align*}
-            \Al{T(v+w)}{T(v)+T(w)}{for all $v,w\in V$}
-            \Al{T(cv)}{cT(v)}{for all $v\in V$ and $c\in\F$}
+            \Aleq{T(v+w)}{T(v)+T(w)}{for all $v,w\in V$}
+            \Aleq{T(cv)}{cT(v)}{for all $v\in V$ and $c\in\F$}
         \end{align*}
         \newn{
             $T(x,y,z)=(2x-4y+z,3x-y+2x)$ is a linear transformation from $\R^3$ to $\R^2$.
@@ -547,8 +547,8 @@
         We define addition and scaling of transformations by:
 
         \begin{align*}
-            \Al{(T+S)(v)}{T(v)+S(v)}{(we can add $T(v),S(v)\in W$)}
-            \Al{(cT)(v)}{cT(v)}{(we can scale the vector $T(v)\in W$ by $c\in\F$)}
+            \Aleq{(T+S)(v)}{T(v)+S(v)}{(we can add $T(v),S(v)\in W$)}
+            \Aleq{(cT)(v)}{cT(v)}{(we can scale the vector $T(v)\in W$ by $c\in\F$)}
         \end{align*}
     }
 
@@ -615,7 +615,7 @@
 
 }
 
-\newpage
+\np
 \newch[Coordinates]{ch6}{
     \newt{thm39}{
         Let $A\in\mathscr{M}_{m\times n}(\F)$. Define $T_A:\F^n\to \F^m$ by $T_A(x)=Ax$.
@@ -670,7 +670,7 @@
     }
 }
 
-\newpage
+\np
 
 \newch[Matrix Algebra (Appendix A)]{ch999}{
     \newd[Matrix Multiplication]{def86}{
@@ -769,6 +769,185 @@
         Similarily, we say that $A$ is \tbf{lower triangular} if $A_{ij}=0$ for all $i<j$. This means that all entries above the diagonal of $A$ must be 0.
 
         We say that $A$ is \tbf{strictly upper-triangular} if $A_{ij}=0$ for all $i\geq j$. 
+    }
+}
+
+\np
+\newch[Coordinates - Continued]{6.1}{
+    \newt{45}{
+        Let $V,W$ be finite dimensional vector spaces over $\F$, $\be, \be'$ bases for $V$, and $\ga, \ga'$ bases for $W$. Let $T:V\to W$ be a linear map.
+        \begin{enumerate}
+            \item $[v]_{\be'}=[I_V]_{\be}^{\be'}[v]_{\be}$.
+            \item $[T]_{\be'}^\ga = [T]^\ga_\be[I_V]^\be_{\be'}$.
+            \item $[T]_\be^{\ga'}[T]_\be^\ga. $
+            \item $[T]_{\be'}^{\ga'}=[I_W]_{\ga}^{\ga'}[T]_{\be}^{\ga}[I_V]_{\be'}^{\be}$.
+        \end{enumerate}
+    }
+
+    \newco[Change of Bases]{5}{
+        Let $V$ be finite dimensional vector spaces over $\F$, and $\be,\be'$ bases for $V$. If $T:V\to V$ is linear then we have that \[[T]_{\be'}=[I_V]^{\be'}_{\be}[T]_{\be}[I_V]^\be_{\be'}.\] 
+
+        Denoting $[I_V]^{\be}_{\be'}=Q, A=[T]_\be$, and $B=[T]_{\be'},$ and recalling that $[I_V]^\be_{\be'}=\bra{[I_V]^{\be'}_\be}^{-1}$ we have that \[B=Q^{-1}AQ.\]
+    }
+
+    \newd[Change of Bases Matrix]{38}{
+        Let $V$ be a finite dimensional vector spaces over $\F$, and $\be,\be'$ bases for $V$.
+
+        The matrix $Q=[I_V]^{\be'}_{\be}$ is called the \tbf{change of coordinate matrix from} $\be$ to $\be'$ coordinates.
+    }
+
+    \newt{46}{
+        Let $V$ be finite dimensional vector spaces over $\F$, and $\be,\be'$ bases for $V$.
+
+        If $Q=[I_V]^{\be'}_{\be}$ is the change of coordinate matrix from $\be$ to $\be'$ coordinates, then $Q^{-1}$ is the change of coordinate matrix from $\be'$ to $\be$ coordinates.
+    }
+}
+
+\np
+\newch[Rank, Invertibility and Systems of Equations]{7}{
+    \newd[rank]{39}{
+        Let $A\in\mathscr{M}_{m\times n}(\F)$ and $T_A\in\cal{L}(\F^n,\F^m)$ the asscotiated transformation. We define the \tbf{rank of} $A$ denoted $\rank A$ by $\rank A = \rank T_A$.
+    }
+
+    \newl{1}{
+        Let $V,W$ be finite dimensional vector spaces over $\F$, $\be=\{v_1,\ldots,v_n\}$ and $\ga=\{w_1,\ldots,w_n\}$ bases of $V,W$ respectively, and $T:V\to W$ a linear map. We have $\im(T)=\vspan[T(v_1),\ldots,T(v_n)]$.
+
+        As a consequence we have that if $A\in\mathscr{M}_{m\times n}(\F)$, then $\im(T_A)$ is spanned by the columns of $A$.
+    }
+
+    \newt{47}{
+        Let $V,W,X$ be finite dimensional vector spaces over $\F$ and $T:V\to W$, $S:W\to X$ linear transformations.
+        \begin{enumerate}
+            \item $\im(S\circ T)\subseteq \im S$.
+            \item $\im(S\circ T)\subseteq S(\im T)$.
+            \item If $S$ is an isomorphism, then $\im S\circ T\simeq\im T$.
+            \item If $T$ is an isomorphism, then $\im S\circ T=\im S$.
+        \end{enumerate}
+    }
+
+    \newco{6}{
+        Let $V,W,X$ be finite dimensional vector spaces over $\F$ and $T:V\to W$, $S: W\to X$ linear transformations.
+        \begin{enumerate}
+            \item $\rank T \le \min[\dim V, \dim W]$.
+            \item \(\rank(S\circ T)\le \rank S\).
+            \item \(\rank(S\circ T)\le \rank T\).
+            \item If $S$ is an isomorphism, then $\rank S\circ T=\rank T$.
+            \item If $T$ is an isomorphism, then $\rank S\circ T=\rank S$.
+        \end{enumerate}
+    }
+
+    \newt[Rank of change of bases]{48}{
+        Let $V,W$ be finite dimensional vector spaces over $\F$, $\be=\{v_1,\ldots,v_n\}$ and $\ga=\{w_1,\ldots,w_m\}$ bases of $V,W$ respectively, and $T: V\to W$ a linear map. Then we have $\rank T=\rank[T]^\ga_\be$.
+    }
+
+    \newco(7){
+        Let $A\in\mathscr{M}_{m\times n}(\F), B\in\mathscr{M}_{n\times k}(\F)$.
+        \begin{enumerate}
+            \item $\rank A\le \min\{m,n\}$.
+            \item $\rank AB\le \rank A$.
+            \item $\rank AB\le\rank B$.
+            \item If $A$ is invertible, then $\rank AB=\rank B$.
+            \item If $B$ is invertible, then $\rank AB=\rank A$.
+        \end{enumerate}
+    }
+
+    \newco[Invertibility and Rank](8){
+        A square matrix $A\in\mathscr{M}_{n\times n}(\F)$ is invertible if and only if $\rank A= n$.
+    }
+
+    \newd[Elementary Matrix]{40}{
+        Let $E\in\mathscr{M}_{n\times n}(\F)$ be a matrix obtained from $1_n$ by performing a row/column operation. We call $E$ an \tbf{elementary matrix}. We say that $E$ is of Type I, II, or, III if it is obtianed using a Type I, II, or III operation.
+    }
+
+    \newt{49}{
+        Let $A\in\mathscr{M}_{m\times n}(\F)$ and $E\in\mathscr{M}_{n\times n}(\F)$, $E'\in\mathscr{M}_{m\times m}(\F)$ be elementary matrices. Set $B=AE$ and $C=E'A$.
+        \begin{enumerate}
+            \item If $E$ is obtained from $1_n$ by performing a column operation, then $B$ is obtained from $A$ by performing \tbf{the same} column operation.
+            \item If $E$ is obtained from $1_n$ by performing a row operation, then $B$ is obtained from $A$ by performing \tbf{the same} row operation.
+            \item $E$ is invertible, and its inverse is an elementary matrix of the same type. (The same is true of $E'$).
+        \end{enumerate}
+    }
+
+    \newt{50}{
+        Let $A\in\mathscr{M}_{m\times n}(\F)$ and $E\in\mathscr{M}_{n\times n}(\F)$, $E'\in\mathscr{M}_{m\times m}(\F)$ be elementary matrices. Set $B=AE$ and $C=E'A$.
+        \begin{enumerate}
+            \item $\rank A=\rank B$.
+            \item $\rank A=\rank C$.
+            \item $Ax=y$ if and only if $Cx=Cy$. In other words, row operations do not change the solutions in a system.
+            \item $\im (T_A)=\im (T_B)$. In other words, column operations do not change the image.
+        \end{enumerate}
+    }
+
+    \newd[RREF]{41}{
+        We say a matrix $A$ is in \tbf{\underline{row-reduced echelon form}} if \tit{all} of the following conditions are met:
+        \begin{enumerate}
+            \item All zero rows are at the bottom of the matrix $A$.
+            \item The first non-zero entry of a non-zero row is 1. (Such entries are called "leding 1's".)
+            \item The leading 1's move to the right, as we go down the rows of $A$.
+            \item All entries above and below a leading 1 are 0.
+        \end{enumerate}
+
+        We use the abbreviation "RREF" for "row-reduced echelon form".
+    }
+
+    \newt[Gaussian Elimination]{51}{
+        Let $A\in\mathscr{M}_{m\times n}(\F)$.
+        \begin{enumerate}
+            \item If the matrix consists entirely of 0's, stop. It's already row-reduced.
+            \item Find the first column with a non-zero entry and move the corresopnding row to the top. (We will call the first non-zero entry $a$.)
+            \item Divide the row by the number $a$ to obtain a leading one.
+            \item Subtract multiples of this row from the rows above and below, in order to make each entry above and below the leading 1 equal to 0.
+            \item Repeat 1-4 on the matrix consisting of the remaining rows.
+        \end{enumerate}
+
+        At the end of the process, we obtain a matrix $R\in\mathscr{M}_{m\times n}(\F)$ which is in RREF.
+
+        As a consequence, every matrix has a RREF.
+    }
+
+    \newl{2}{
+        Let $A\in\mathscr{M}_{m\times n}(\F)$ and let $R\in\mathscr{m\times n}(\F)$ be its RREF.
+        \begin{enumerate}
+            \item If $k$ is the number of zero rows in $R$, then the columns of $R$ consisting the leading ones are the first $m-k$ elements $\{e_1,\ldots, e_{m-k}\}$ of the standard basis $\{e_1,e_2,\ldots,e_m\}$ for $\F^m$.
+            \item $\rank A=\rank R=$\# of leading 1's.
+            \item $\rank A=\rank R=$\# of non-zero rows in $R$.
+        \end{enumerate}
+    }
+
+    \newco{9}{
+        Let $A\in\mathscr{M}_{m\times n}(\F)$. Then there exists an invertible matrix $b\in\mathscr{M}_{m\times m}(\F$) so that $BA=R$ is in RREF.
+    }
+
+    \newco{10}{
+        Let $A\in\mathscr{M}_{n\times n}(\F)$. Then $A$ is invertible if and only if the RREF of $A$ is $1_n$.
+    }
+
+    \newt{52}{
+        Let $A\in\mathscr{M}_{m\times n}(\F)$ be a matrix and $r=\rank A$.
+
+        If $r=0$, then $A=)_{mn}$ is the zero matrix.
+
+        If $r>0$, then there exists a sequence of row operations an column operations, which transform $A$ into a matrix of the form $\left.\left(\begin{array}{c|c}{{\mathrm{I}_{r}}}&{0}\\\hline{0}&{0}\end{array}\right.\right)$.
+    }
+
+    \newt{53}{
+        Let $A\in\mathscr{M}_{m\times n}(\F)$, $R$ denote its $RREF$, and $T_A:\F^n\to\F^m$ te associated linear transformation. Let $a_1,\ldots, a_n$ denote the columns of $A$.
+
+        \begin{enumerate}
+            \item The set of $n-r$ ``basic solutions'' for to $Ax=0$ is a basis for $N(T_A)$.
+            \item If the leading 1's in $R$ appear in columns $k_1,\ldots, k_r$, then the columns $a_{k_1},a_{k_2},\ldots,a_{k_r}$ of $A$ provide a basis for $\im(T_A)$.
+            \item If we apply the Gaussian Algorithm replacing ``row operations'' with ``column operations'' at every step, then the non-zero columns of the resulting matrix provide a basis for $\im(T_A)$.
+        \end{enumerate}
+    }
+
+    \newt[Invertibility]{54}{
+        Let $A\in\mathscr{M}_{n\times n}(\F)$. Then $A$ is invertible if and only if $A$ is a product of elementary matrices.
+    }
+
+    \newt[Computing the Inverse]{55}{
+        Let $A\in\mathscr{M}_{n\times n}(\F)$. Consider the augmented matrix $\left(A|I_n\right)$. Row reduce the augmented matrix to obtain $\bra{R\mid B}$, where $R$ is the RREF of $A$.
+
+        Then $A$ is invertible if and only if this procedure results in the augmented matrix $\bra{I_n\mid B}$. In this case, $B=A^{-1}$.
     }
 }
 
