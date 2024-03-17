@@ -292,3 +292,307 @@ INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/xkeyval/xkeyval.sty
 INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/xkeyval/xkeyval.sty
 INPUT c:/Program Files/texlive/2023/texmf-dist/tex/generic/xkeyval/xkeyval.tex
 INPUT c:/Program Files/texlive/2023/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/everypage/everypage.sty
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/everypage/everypage.sty
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/tools/afterpage.sty
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/tools/afterpage.sty
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryangles.code.tex
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryangles.code.tex
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryquotes.code.tex
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryquotes.code.tex
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshadows.code.tex
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshadows.code.tex
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfadings.code.tex
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfadings.code.tex
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/generic/pgf/libraries/pgflibraryfadings.code.tex
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/generic/pgf/libraries/pgflibraryfadings.code.tex
+OUTPUT Definition Sheet.pdf
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/changepage/changepage.sty
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/changepage/changepage.sty
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/float/float.sty
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/float/float.sty
+INPUT ./clsfiles/shortcuts.sty
+INPUT clsfiles/shortcuts.sty
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/generic/xint/xintexpr.sty
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/generic/xint/xintexpr.sty
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/generic/xint/xintfrac.sty
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/generic/xint/xintfrac.sty
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/generic/xint/xint.sty
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/generic/xint/xint.sty
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/generic/xint/xintcore.sty
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/generic/xint/xintcore.sty
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/generic/xint/xintkernel.sty
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/generic/xint/xintkernel.sty
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/generic/xint/xinttools.sty
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/generic/xint/xinttools.sty
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/generic/xint/xinttrig.sty
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/generic/xint/xinttrig.sty
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/generic/xint/xintlog.sty
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/generic/xint/xintlog.sty
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/generic/poormanlog/poormanlog.sty
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/generic/poormanlog/poormanlog.sty
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/generic/poormanlog/poormanlog.tex
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/generic/poormanlog/poormanlog.tex
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/generic/poormanlog/poormanlog.tex
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/generic/ulem/ulem.sty
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/generic/ulem/ulem.sty
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/latex-fonts/lasy6.tfm
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/tools/verbatim.sty
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/tools/verbatim.sty
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/environ/environ.sty
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/environ/environ.sty
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/tcolorbox/tcbbreakable.code.tex
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/pdfcol/pdfcol.sty
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/pdfcol/pdfcol.sty
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/graphics/color.sty
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/tcolorbox/tcbskins.code.tex
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/tikzfill/tikzfill.image.sty
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/tikzfill/tikzfill.image.sty
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/tikzfill/tikzfill-common.sty
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/tikzfill/tikzfill-common.sty
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/tikzfill/tikzlibraryfill.image.code.tex
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/tikzfill/tikzlibraryfill.image.code.tex
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/tcolorbox/tcbskinsjigsaw.code.tex
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/tcolorbox/tcbtheorems.code.tex
+INPUT ./clsfiles/tcbthm.sty
+INPUT clsfiles/tcbthm.sty
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/starfont/starfont.sty
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/starfont/starfont.sty
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/wasysym/wasysym.sty
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/wasysym/wasysym.sty
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/varwidth/varwidth.sty
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/varwidth/varwidth.sty
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/parskip/parskip.sty
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/parskip/parskip.sty
+INPUT ./clsfiles/mat240.sty
+INPUT clsfiles/mat240.sty
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/lm/ot1lmr.fd
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/lm/ot1lmr.fd
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/lm/ot1lmr.fd
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmr10.tfm
+INPUT ./Definition Sheet.aux
+INPUT ./Definition Sheet.aux
+INPUT Definition Sheet.aux
+OUTPUT Definition Sheet.aux
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+INPUT ./Definition Sheet.out
+INPUT ./Definition Sheet.out
+INPUT Definition Sheet.out
+INPUT Definition Sheet.out
+INPUT ./Definition Sheet.out
+INPUT ./Definition Sheet.out
+OUTPUT Definition Sheet.out
+INPUT ./clsfiles/stars.png
+INPUT ./clsfiles/stars.png
+INPUT ./clsfiles/stars.png
+INPUT ./clsfiles/stars.png
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmr17.tfm
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmbx12.tfm
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmbx12.tfm
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmr12.tfm
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmr12.tfm
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/lm/omllmm.fd
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/lm/omllmm.fd
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/lm/omllmm.fd
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/lm/lmmi12.tfm
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/lm/lmmi12.tfm
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/lm/lmmi12.tfm
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/lm/omslmsy.fd
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/lm/omslmsy.fd
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/lm/omslmsy.fd
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/lm/lmsy10.tfm
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/lm/lmsy10.tfm
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/lm/lmsy10.tfm
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/lm/omxlmex.fd
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/lm/omxlmex.fd
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/lm/omxlmex.fd
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/lm/lmex10.tfm
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/microtype/mt-msa.cfg
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/microtype/mt-msa.cfg
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/microtype/mt-msa.cfg
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/microtype/mt-msb.cfg
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/microtype/mt-msb.cfg
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/microtype/mt-msb.cfg
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/jknapltx/ursfs.fd
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/jknapltx/ursfs.fd
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/jknapltx/ursfs.fd
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/wasysym/uwasy.fd
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/wasysym/uwasy.fd
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/wasysym/uwasy.fd
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/wasy/wasy10.tfm
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/wasy/wasy10.tfm
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/wasy/wasy10.tfm
+INPUT ./clsfiles/qunwang.png
+INPUT ./clsfiles/qunwang.png
+INPUT ./clsfiles/qunwang.png
+INPUT ./clsfiles/qunwang.png
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT c:/Program Files/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmbx10.tfm
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmr7.tfm
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmr5.tfm
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/lm/lmmi10.tfm
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/lm/lmmi7.tfm
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/lm/lmmi5.tfm
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/lm/lmsy10.tfm
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/lm/lmsy7.tfm
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/lm/lmsy5.tfm
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/rsfs/rsfs7.tfm
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/rsfs/rsfs5.tfm
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/wasy/wasy10.tfm
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/wasy/wasy7.tfm
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/wasy/wasy5.tfm
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/starfont/fstr8x.tfm
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/fourier/ufuts.fd
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/fourier/ufuts.fd
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/fourier/ufuts.fd
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/fourier/futrorn.tfm
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmr8.tfm
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/fourier/futrorn.tfm
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/vf/public/fourier/futrorn.vf
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/fourier/fourier-alt.tfm
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/fourier/fourier-orns.tfm
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/vf/public/fourier/futrorn.vf
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/fourier/fourier-alt.tfm
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/fourier/fourier-orns.tfm
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmri10.tfm
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmri7.tfm
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmri7.tfm
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmbx7.tfm
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmbx5.tfm
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmbxi10.tfm
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmbx12.tfm
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT ./clsfiles/nightsky.png
+INPUT Definition Sheet.aux
+INPUT ./Definition Sheet.out
+INPUT ./Definition Sheet.out
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/fourier/fourier-orns.pfb
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx10.pfb
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx12.pfb
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx7.pfb
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmex10.pfb
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi10.pfb
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi5.pfb
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi7.pfb
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr10.pfb
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr5.pfb
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr7.pfb
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr8.pfb
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmri10.pfb
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy10.pfb
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy5.pfb
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy7.pfb
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/starfont/starfont.pfb
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/wasy-type1/wasy10.pfb

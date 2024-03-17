@@ -1,8 +1,8 @@
 # Fdb version 4
-["pdflatex"] 1710664449 "c:/Users/alitt/OneDrive - University of Toronto/Courses/Mathematics/MAT240/Definition Sheet/MAT240-Definition-Sheet/Definition Sheet.tex" "Definition Sheet.pdf" "Definition Sheet" 1710664462 0
-  "Definition Sheet.aux" 1710664462 9165 0b7f26cb00469c76708fe6e01cd6cda8 "pdflatex"
-  "Definition Sheet.out" 1710664451 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "Definition Sheet.tex" 1710664435 46101 4c3788f7c6f16ca4968816487e78f39c ""
+["pdflatex"] 1710699860 "c:/Users/alitt/OneDrive - University of Toronto/Courses/Mathematics/MAT240/Definition Sheet/MAT240-Definition-Sheet/Definition Sheet.tex" "Definition Sheet.pdf" "Definition Sheet" 1710699873 0
+  "Definition Sheet.aux" 1710699873 9313 455f79d4d6d4827b3b3b999a838de8e8 "pdflatex"
+  "Definition Sheet.out" 1710699862 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "Definition Sheet.tex" 1710699859 46646 9b4aa322cc5c83b69159cc929201dddc ""
   "c:/Program Files/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1699475139 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
   "c:/Program Files/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1699475139 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
   "c:/Program Files/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc" 1699475139 2840 216e6e45ad352e2456e1149f28885bee ""
@@ -276,7 +276,7 @@
   "c:/Program Files/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1699479960 4753631 ce11096d3ddebebb488d7abe23a051aa ""
   "c:/Program Files/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1699480103 8213025 3bd61feff7b9dff35f8a668730b4a750 ""
   "c:/Program Files/texlive/2023/texmf.cnf" 1699479938 713 e69b156964470283e0530f5060668171 ""
-  "c:/Users/alitt/OneDrive - University of Toronto/Courses/Mathematics/MAT240/Definition Sheet/MAT240-Definition-Sheet/Definition Sheet.tex" 1710664435 46101 4c3788f7c6f16ca4968816487e78f39c ""
+  "c:/Users/alitt/OneDrive - University of Toronto/Courses/Mathematics/MAT240/Definition Sheet/MAT240-Definition-Sheet/Definition Sheet.tex" 1710699859 46646 9b4aa322cc5c83b69159cc929201dddc ""
   "clsfiles/mat240.sty" 1708322662 154 70ef6ac94fac887908608205fad83aab ""
   "clsfiles/nightsky.png" 1708338107 1039263 2371673c7b9f68538b3dd8cc08568785 ""
   "clsfiles/qunwang.png" 1708319861 338142 3e89f57b64238d0f62e84df556289001 ""
