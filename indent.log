@@ -1,6 +1,6 @@
 INFO:  latexindent.exe version 3.23.3, 2023-10-13, a script to indent .tex files
        latexindent.exe lives here: C:/Program Files/texlive/2023/bin/windows/
-       Wed Mar 27 23:14:53 2024
+       Thu Mar 28 09:57:57 2024
        Filename: c:/Users/alitt/OneDrive - University of Toronto/Courses/Mathematics/MAT240/Definition Sheet/MAT240-Definition-Sheet/LatexTemplate/clsfiles/__latexindent_temp_mat240.sty
 INFO:  Processing switches:
        -y|--yaml: YAML settings specified via command line
@@ -20,6 +20,7 @@ INFO:  YAML settings read: -y switch
        single-quoted string found in -y switch: '    ', substitute to     
        Updating mainSettings with defaultIndent:     
 INFO:  Phase 1: searching for objects
+       No objects found.
 INFO:  Phase 2: finding surrounding indentation
 INFO:  Phase 3: indenting objects
 INFO:  Phase 4: final indentation check

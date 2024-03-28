@@ -917,19 +917,19 @@
     }
 
     \newt{62}{
-        Let $A\in\mat{n}{n}$. Then $A$ is invertible if and only if $\det A\neq0$.
+        Let $A\in\mat[n]{n}$. Then $A$ is invertible if and only if $\det A\neq0$.
     }
 
     \newt{63}{
-        Let $A\in\mat{n}{n}$. Then $\det(A^t)=\det A$.
+        Let $A\in\mat[n]{n}$. Then $\det(A^t)=\det A$.
     }
 
     \newco{11}{
-        Let $A\in\mat{n}{n}$, then $\det(A)=\ds\sum_{i=1}^n(-1)^{i+1}A_{i1}\det\bra{\tilde{A}_{i1}}$. (This is called the ``column $j$ expansion of $\det A$'').
+        Let $A\in\mat[n]{n}$, then $\det(A)=\ds\sum_{i=1}^n(-1)^{i+1}A_{i1}\det\bra{\tilde{A}_{i1}}$. (This is called the ``column $j$ expansion of $\det A$'').
     }
 
     \newt{64}{
-        Let $A,B\in\mat{n}{n}$. If $A\sim B$, then $\det A=\det B$.
+        Let $A,B\in\mat[n]{n}$. If $A\sim B$, then $\det A=\det B$.
     }
 
     \newd{44}{
@@ -953,7 +953,7 @@
 \np
 \newch[Diagonalization]{9}{
     \newd{45}{
-        Recall, we say that a square matrix $D\in\mat{n}{n}$ is diagonal if $D_{ij}=0$ for $i\ne j$.
+        Recall, we say that a square matrix $D\in\mat[n]{n}$ is diagonal if $D_{ij}=0$ for $i\ne j$.
 
         We will denote the diagonal matrix $\left.D=\left(\begin{array}{cccc}d_{11}&0&\cdots&0\\0&d_{22}&\cdots&0\\\vdots&\vdots&\ddots&\vdots\\0&0&\cdots&d_{nn}\end{array}\right.\right)$ by $D=\diag (d_{11},\ldots, d_{nn})$.
 
@@ -983,7 +983,7 @@
 
         Set $C_T(x)=\det(x\tbf{I}_V-T)$. We call $C_T$ the \tbf{characteristic polynomial} of $T$.
 
-        Similarly, for $A\in\mat{n}{n}$ we define $C_A(x)=\det(x\tbf{I}_V-A)$, and call $C_A$ the characteristic polynomial of $A$.
+        Similarly, for $A\in\mat[n]{n}$ we define $C_A(x)=\det(x\tbf{I}_V-A)$, and call $C_A$ the characteristic polynomial of $A$.
     }
 
     \newt{69}{
