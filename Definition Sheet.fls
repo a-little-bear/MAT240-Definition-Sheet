@@ -4,8 +4,8 @@ INPUT c:/Program Files/texlive/2023/texmf-dist/web2c/texmf.cnf
 INPUT c:/Program Files/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt
 INPUT c:/Users/alitt/OneDrive - University of Toronto/Courses/Mathematics/MAT240/Definition Sheet/MAT240-Definition-Sheet/Definition Sheet.tex
 OUTPUT Definition Sheet.log
-INPUT ./hw.cls
-INPUT hw.cls
+INPUT ./LatexTemplate/hw.cls
+INPUT LatexTemplate/hw.cls
 INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/silence/silence.sty
 INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/silence/silence.sty
 INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/kvoptions/kvoptions.sty
@@ -311,8 +311,8 @@ INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/changepage/changepage.s
 INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/changepage/changepage.sty
 INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/float/float.sty
 INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/float/float.sty
-INPUT ./clsfiles/shortcuts.sty
-INPUT clsfiles/shortcuts.sty
+INPUT ./LatexTemplate/clsfiles/shortcuts.sty
+INPUT LatexTemplate/clsfiles/shortcuts.sty
 INPUT c:/Program Files/texlive/2023/texmf-dist/tex/generic/xint/xintexpr.sty
 INPUT c:/Program Files/texlive/2023/texmf-dist/tex/generic/xint/xintexpr.sty
 INPUT c:/Program Files/texlive/2023/texmf-dist/tex/generic/xint/xintfrac.sty
@@ -334,10 +334,6 @@ INPUT c:/Program Files/texlive/2023/texmf-dist/tex/generic/poormanlog/poormanlog
 INPUT c:/Program Files/texlive/2023/texmf-dist/tex/generic/poormanlog/poormanlog.tex
 INPUT c:/Program Files/texlive/2023/texmf-dist/tex/generic/poormanlog/poormanlog.tex
 INPUT c:/Program Files/texlive/2023/texmf-dist/tex/generic/poormanlog/poormanlog.tex
-INPUT c:/Program Files/texlive/2023/texmf-dist/tex/generic/ulem/ulem.sty
-INPUT c:/Program Files/texlive/2023/texmf-dist/tex/generic/ulem/ulem.sty
-INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map
-INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/latex-fonts/lasy6.tfm
 INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
 INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
 INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/tools/verbatim.sty
@@ -359,8 +355,8 @@ INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/tikzfill/tikzlibraryfil
 INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/tikzfill/tikzlibraryfill.image.code.tex
 INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/tcolorbox/tcbskinsjigsaw.code.tex
 INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/tcolorbox/tcbtheorems.code.tex
-INPUT ./clsfiles/tcbthm.sty
-INPUT clsfiles/tcbthm.sty
+INPUT ./LatexTemplate/clsfiles/tcbthm.sty
+INPUT LatexTemplate/clsfiles/tcbthm.sty
 INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/starfont/starfont.sty
 INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/starfont/starfont.sty
 INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/wasysym/wasysym.sty
@@ -369,11 +365,12 @@ INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/varwidth/varwidth.sty
 INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/varwidth/varwidth.sty
 INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/parskip/parskip.sty
 INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/parskip/parskip.sty
-INPUT ./clsfiles/mat240.sty
-INPUT clsfiles/mat240.sty
+INPUT ./LatexTemplate/clsfiles/mat240.sty
+INPUT LatexTemplate/clsfiles/mat240.sty
 INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/lm/ot1lmr.fd
 INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/lm/ot1lmr.fd
 INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/lm/ot1lmr.fd
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map
 INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmr10.tfm
 INPUT ./Definition Sheet.aux
 INPUT ./Definition Sheet.aux
@@ -397,10 +394,10 @@ INPUT Definition Sheet.out
 INPUT ./Definition Sheet.out
 INPUT ./Definition Sheet.out
 OUTPUT Definition Sheet.out
-INPUT ./clsfiles/stars.png
-INPUT ./clsfiles/stars.png
-INPUT ./clsfiles/stars.png
-INPUT ./clsfiles/stars.png
+INPUT ./LatexTemplate/clsfiles/stars.png
+INPUT ./LatexTemplate/clsfiles/stars.png
+INPUT ./LatexTemplate/clsfiles/stars.png
+INPUT ./LatexTemplate/clsfiles/stars.png
 INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmr17.tfm
 INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmbx12.tfm
 INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmbx12.tfm
@@ -452,14 +449,14 @@ INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/wasysym/uwasy.fd
 INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/wasy/wasy10.tfm
 INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/wasy/wasy10.tfm
 INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/wasy/wasy10.tfm
-INPUT ./clsfiles/qunwang.png
-INPUT ./clsfiles/qunwang.png
-INPUT ./clsfiles/qunwang.png
-INPUT ./clsfiles/qunwang.png
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/qunwang.png
+INPUT ./LatexTemplate/clsfiles/qunwang.png
+INPUT ./LatexTemplate/clsfiles/qunwang.png
+INPUT ./LatexTemplate/clsfiles/qunwang.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
 INPUT c:/Program Files/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc
 INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmbx10.tfm
@@ -490,9 +487,9 @@ INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/fourier/ufuts.fd
 INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/fourier/futrorn.tfm
 INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmr8.tfm
 INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/fourier/futrorn.tfm
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
 INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/vf/public/fourier/futrorn.vf
 INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/fourier/fourier-alt.tfm
 INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/fourier/fourier-orns.tfm
@@ -502,76 +499,82 @@ INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc
 INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/vf/public/fourier/futrorn.vf
 INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/fourier/fourier-alt.tfm
 INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/fourier/fourier-orns.tfm
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
 INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmri10.tfm
 INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmri7.tfm
 INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmri7.tfm
 INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmbx7.tfm
 INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmbx5.tfm
 INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmbxi10.tfm
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
 INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmbx12.tfm
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
-INPUT ./clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
+INPUT ./LatexTemplate/clsfiles/nightsky.png
 INPUT Definition Sheet.aux
 INPUT ./Definition Sheet.out
 INPUT ./Definition Sheet.out

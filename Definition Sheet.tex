@@ -1,12 +1,12 @@
-\documentclass[11pt, sakura, night, 0.5in]{hw}
+\documentclass[11pt, sakura, night, 0.5in]{LatexTemplate/hw}
 
 \def\course{MAT240: Algebra I}
 \def\headername{Definition Sheet}
 \def\name{Joseph Siu}
 \def\info{Most of the numbers are correct. This sheet also does not include the examples.}
-\def\logo{clsfiles/qunwang}
+\def\logo{\clsfiles/qunwang}
 
-\usepackage{clsfiles/mat240}
+\useclspackage{mat240}
 
 
 \begin{document} 
@@ -586,7 +586,7 @@
     }
 
     \newt{thm34}{
-        Let $V,W$ be vector spaces over $\F$ and $T: V\to W$ be linear. Then $T$ is injective if and only if $N(T)+\{0_v\}$.
+        Let $V,W$ be vector spaces over $\F$ and $T: V\to W$ be linear. Then $T$ is injective if and only if $N(T)=\{0_v\}$.
     }
 
     \newt{thm35}{
@@ -668,112 +668,7 @@
     \newt{thm44}{
         Let $V,W$ be finite dimensional vector spaces over a field $\F, \beta=\{v_1,\ldots,v_n\}$ a basis of $V$, and $\gamma=\{w_1,\ldots,w_m\}$ a basis of $W$. Then we have \[[T]_\beta^\gamma[v]_\beta=[T(v)]_\gamma\] for all $v\in V$.
     }
-}
 
-\np
-
-\newch[Matrix Algebra (Appendix A)]{ch999}{
-    \newd[Matrix Multiplication]{def86}{
-        Let $A\in\mathscr{M}_{m\times n}(\F)$ and $B\in\mathscr{M}_{n\times k}(\F)$. We define their product $AB\in\mathscr{M}_{m\times k}(\F)$ as follows: for $i\in\{1,\ldots,m\}$ and $j\in\{1,\ldots,k\}$ the $ij$-entry of the product $AB$ is given by 
-        
-        \[(AB)_{ij}=\sum_{l=1}^n A_{il}B_{lj}.\]
-
-        \newn{
-            $AB\neq BA$.
-        }
-    }
-
-    \newd[Special Matrices]{def87}{
-        For each $n,m\in\N$ we define the following matrices:
-        \begin{enumerate}
-            \item $O_{m,n}\in\mathscr{M}_{m\times n}(\F)$ - the matrix consisting of all 0's. In other words $(O_{m,n})_{i,j}=0$ for all $i\in\{1,\ldots,m\}$ and $j\in\{1,\ldots,n\}$. 
-            \item $I_n\in\mathscr{M}_{n\times n}(\F)$ - the matrix with 1's on the diagonals, and 0 in all other entries. In other words 
-            
-            $$(I_n)_{ij}=\begin{cases}1&\text{if }i=j\\0&\text{if }i\neq j\end{cases}$$\\
-        \end{enumerate}
-
-        \newm{
-            $$O_{2,3}= \begin{pmatrix}0&0&0\\0&0&0\\\end{pmatrix}$$
-        
-            $$I_3=\begin{pmatrix}1&0&0\\0&1&0\\0&0&1\\\end{pmatrix}$$
-        }
-    }
-
-    
-
-    \newt{thm124}{
-        Let $\mathbb{F}$ be a field, $A, A_1, A_2 \in \mathscr{M}_{\mathbf{m} \times \mathbf{n}}(\mathbb{F}), B, B_1, B_2 \in \mathcal{M}_{n \times k}(\mathbb{F}), C \in \mathcal{M}_{k \times p}(\mathbb{F})$ and $c \in \mathbb{F}$.
-        
-        1. $A(B C)=(A B) C$
-        
-        2. $\left(A_1+A_2\right) B=A_1 B+A_2 B$
-        
-        3. $A\left(B_1+B_2\right)=A B_1+A B_2$
-        
-        4. $I_m A=A=A I_n$
-        
-        5. $\mathrm{O}_{r m} A=\mathrm{O}_{r n}$ for any 
-        $r \in \mathbb{N}$.
-        
-        6. $A(c B)=c(A B)=\left(c \mathrm{I}_m\right) A B=A B\left(c \mathrm{I}_k\right)=A\left(c \mathrm{I}_n\right) B$.
-    }
-
-    \newd[Invertibility]{def88}{
-        Let $A\in\mathscr{M}_{n\times n}(\F)$. We say that $A$ is \tbf{invertible} if there exists a matrix $B\in\mathscr{M}_{n\times n}(\F)$ so that $AB=I_n=BA$. 
-    }
-
-    \newt{thm125}{
-        Let $A,B\in\mathscr{M}_{n\times n}(\F)$. 
-        \begin{enumerate}
-            \item If $A$ is invertible, then the inverse of $A$ is unique.
-            \item If $A$ is invertible, then $A^{-1}$ is also invertible.
-            \item If $A$ and $B$ are invertible, then $AB$ is invertible.
-            \item $I_n$ is invertible.
-            \item If $AB=I_n$, then $A$ is invertible and $B=A^{-1}$.
-        \end{enumerate}
-    }
-
-    \newd[$A^t$]{def89}{
-        Let $A\in\mathscr{M}_{m\times n}(\F)$. We define the matrix $A^t\in\mathscr{M}_{n\times m}(\F)$  by:
-
-        \[(A^t)_{ij}=A_{ji}.\]
-
-        In other words, to obtain $A^t$ we ``swap the rows and columns of A."
-    }
-
-    \newd[Symmetric]{def90}{
-        We say that $A\in\mathscr{M}_{n\times n}(\F)$ is \tbf{symmetric} if $A^t=A$. We denot ethe set of all symmetric matrices by \tbf{Sym}$_n(\F)$.
-
-        We say that $A\in\mathscr{M}_{n\times n}(\F)$ is \tbf{skew-symmetric} if $A^t=-A$. We denote the set of all skew-symmetric matrices by \tbf{Sk}$_n(\F)$.
-    }
-
-    \newt{thm126}{
-        Let $A, B \in \mathscr{M}_{\mathbf{m} \times \mathbf{n}}(\mathbb{F}), C \in \mathscr{M}_{n \times k}(\mathbb{F})$ and $c \in \mathbb{F}$.
-        
-        1. $(A+B)^t=A^t+B^t$
-        
-        2. $(c A)^t=c A^t$
-        
-        3. $\left(A^t\right)^t=A$
-        
-        4. $(A C)^t=C^t A^t$.
-        
-        5. In the case that $m=n$, we also have that if $A \in \mathscr{M}_{\mathbf{n} \times \mathbf{n}}(\mathbb{F})$ is invertible, then $A^t \in \mathscr{M}_{\mathbf{n} \times \mathbf{n}}(\mathbb{F})$ is invertible and $\left(A^t\right)^{-1}=\left(A^{-1}\right)^t$.
-    }
-
-    \newd[Diagonal and Triangular]{def91}{
-        We say that $A$ is \tbf{diagonal} if $A_{ij}=0$ for all $i\neq j$. 
-
-        Let $A\in\mathscr{M}_{n\times n}(\F)$. We say that $A$ is \tbf{upper triangular} if $A_{ij}=0$ for all $i>j$. This means that all entries below the diagonal of $A$ must be 0.
-
-        Similarily, we say that $A$ is \tbf{lower triangular} if $A_{ij}=0$ for all $i<j$. This means that all entries above the diagonal of $A$ must be 0.
-
-        We say that $A$ is \tbf{strictly upper-triangular} if $A_{ij}=0$ for all $i\geq j$. 
-    }
-}
-
-\np
-\newch[Coordinates - Continued]{6.1}{
     \newt{45}{
         Let $V,W$ be finite dimensional vector spaces over $\F$, $\be, \be'$ bases for $V$, and $\ga, \ga'$ bases for $W$. Let $T:V\to W$ be a linear map.
         \begin{enumerate}
@@ -906,7 +801,7 @@
     }
 
     \newl{2}{
-        Let $A\in\mathscr{M}_{m\times n}(\F)$ and let $R\in\mathscr{m\times n}(\F)$ be its RREF.
+        Let $A\in\mathscr{M}_{m\times n}(\F)$ and let $R\in\mathscr{M}_{m\times n}(\F)$ be its RREF.
         \begin{enumerate}
             \item If $k$ is the number of zero rows in $R$, then the columns of $R$ consisting the leading ones are the first $m-k$ elements $\{e_1,\ldots, e_{m-k}\}$ of the standard basis $\{e_1,e_2,\ldots,e_m\}$ for $\F^m$.
             \item $\rank A=\rank R=$\# of leading 1's.
@@ -948,6 +843,269 @@
         Let $A\in\mathscr{M}_{n\times n}(\F)$. Consider the augmented matrix $\left(A|I_n\right)$. Row reduce the augmented matrix to obtain $\bra{R\mid B}$, where $R$ is the RREF of $A$.
 
         Then $A$ is invertible if and only if this procedure results in the augmented matrix $\bra{I_n\mid B}$. In this case, $B=A^{-1}$.
+    }
+}
+
+
+\np
+\newch[Determinants]{8}{
+    \newd{42}{
+        Let $A=\bra{\begin{array}{cc}a & b \\ c & d\end{array}}\in\mathscr{M}_{2\times2}(\F)$. We define the \tbf{determinant} of $A$ by $\det \bra{\begin{array}{cc}a & b \\ c & d\end{array}}=ad-bc\in\F$.
+    }
+
+    \newt{56}{
+        The matrix $A=\bra{\begin{array}{cc}a & b \\ c & d\end{array}}\in\mathscr{M}_{2\times2}(\F)$ is invertible if and only if $\det A=ad-bc\neq0$.
+
+        In this case $A$ is invertible we have $A^{-1}=\frac{1}{ad-bc}\bra{\begin{array}{cc}d & -b \\ -c & a\end{array}}.$
+    }
+
+    \newd{43}{
+        Let $A\in\mathscr{M}_{n\times n}(\F)$. For each $i,j\in\{1,\dots,n\}$ we define $\tilde{A}_{ij}$ to be the $(n-1)\times (n-1)$ matrix obtained by deleting row $i$ and column $j$ of $A$.
+
+        We define $\det A\in\F$ as follows:
+        \begin{enumerate}
+            \item For $n=1$, $A=(a)\in\F,$ and we set $\det(a)=a$.
+            \item For $n=2$, $\det\bra{\begin{array}{cc} a & b \\ c & d\end{array}}=ad-bc$
+            \item For $n\ge2$, we set $\det A=\ds\sum_{j=1}^n (-1)^{1+j} A_{1j}\det\bra{\tilde{A}_{1j}}$
+        \end{enumerate}
+    }
+
+    \newt{57}{
+        Consider the determinant as a function on the rows of a matrix.
+
+        If $\tbf{r}_1,\dots,\tbf{r}_n,\tbf{a},\tbf{b}\in\F^n$ and $c\in\F$, then we have: \[\det\bra{\begin{array}{c}\tbf{r}_1\\\vdots\\ c\tbf{a+b}\\\vdots\\ \tbf{r}_n\end{array}}=c\det\bra{
+            \begin{array}{c}
+                \tbf{r}_1\\\vdots\\ \tbf{a}\\\vdots\\ \tbf{r}_n
+            \end{array}} + \det\bra{
+                \begin{array}{c}
+                    \tbf{r}_1\\\vdots\\ \tbf{b}\\\vdots\\ \tbf{r}_n
+                \end{array}
+            }.
+        \]
+
+        In other words, for each $i\in\{1,\dots,n\}$, the determinant is a linear function of row $i$, \tbf{with all the other rows fixed}.
+    }
+
+    \newt{58}{
+        Let $A\in\mathscr{M}_{n\times n}(\F)$ with $n\ge2$.
+        \begin{enumerate}
+            \item If $A$ has a row of $0$'s, then $\det A=0$.
+            \item For any $i\in\{1,\dots,n\}$, $\det A=\ds\sum_{j=1}^n (-1)^{i+j}A_{ij}\det\bra{\tilde{A}_{ij}}$. (This is called the ``row $i$ expansion of $\det A$''.)
+            \item If $A$ has two identical rows, then $\det A=0$.
+            \item If $B$ is obtained from $A$ by swapping two rows, then $\det B=-\det A$.
+            \item If $B$ is obtained from $A$ by scaring row $i$ by $a\in\F$, then $\det B=a\det A$.
+            \item If $B$ is obtained from $A$ by adding a multiple of one row to another, then $\det B=\det A$. (Here $n\ge2$ so that the statement makes sense.)
+            \item If $A$ is upper (or lower) triangular, then $\det A$ is the product of the diagonal entries of $A$.
+        \end{enumerate}
+    }
+
+    \newt{59}{
+        Let $A\in\mathscr{M}_{n\times n}(\F)$. If $\rank A<n,$ then $\det A=0$.
+    }
+
+    \newt{60}{
+        Let $E\in\mathscr{n\times n}(\F)$ be an elementary matrix.
+        \begin{enumerate}
+            \item If $E$ is of Type I, then $\det E=-1$.
+            \item If $E$ is of Type II, and scales by $a\in F$, then $\det E=a$.
+            \item If $E$ is of Type III, then $\det E=1$.
+        \end{enumerate}
+    }
+
+    \newt{61}{
+        Let $A,B\in\mathscr{M}_{n\times n}(\F)$. Then $\det(AB)=\det(A)\det(B)$.
+    }
+
+    \newt{62}{
+        Let $A\in\mat{n}{n}$. Then $A$ is invertible if and only if $\det A\neq0$.
+    }
+
+    \newt{63}{
+        Let $A\in\mat{n}{n}$. Then $\det(A^t)=\det A$.
+    }
+
+    \newco{11}{
+        Let $A\in\mat{n}{n}$, then $\det(A)=\ds\sum_{i=1}^n(-1)^{i+1}A_{i1}\det\bra{\tilde{A}_{i1}}$. (This is called the ``column $j$ expansion of $\det A$'').
+    }
+
+    \newt{64}{
+        Let $A,B\in\mat{n}{n}$. If $A\sim B$, then $\det A=\det B$.
+    }
+
+    \newd{44}{
+        Let $V$ be finite dimensional vector space over $\F$, and $T:V\to V$ a linear map. We define \[\det T=\det[T]_{\be},\] where $\be$ is any basis of $V$.
+    }
+
+    \newt[Geometric meaning of Determinants]{65}{
+        Let $:\R^2\to\R^2$ be linear. Then $|\det T|=$Area($P$), where $P$ is the parallelogram spanned by $T(\tbf{$e_1$}),T(\tbf{$e_2$})$.
+    }
+
+    \newt{66}{
+        Let $T:\R^3\to\R^3$ be linear. Then $|\det T|=$Vol($P$), were $P$ is the parallelepiped spanned by $T(\tbf{$e_1$}),T(\tbf{$e_2$}),T(\tbf{$e_3$})$.
+    }
+
+    \newt{67}{
+        Let $T:\R^n\to\R^n$ be linear. Then $|\det T|$=Vol($P$), where $P$ is the $n$-parallelepiped spanned by $T(\tbf{$e_1$}),\dots,T(\tbf{$e_n$})$.
+    }
+}
+
+
+\np
+\newch[Diagonalization]{9}{
+    \newd{45}{
+        Recall, we say that a square matrix $D\in\mat{n}{n}$ is diagonal if $D_{ij}=0$ for $i\ne j$.
+
+        We will denote the diagonal matrix $\left.D=\left(\begin{array}{cccc}d_{11}&0&\cdots&0\\0&d_{22}&\cdots&0\\\vdots&\vdots&\ddots&\vdots\\0&0&\cdots&d_{nn}\end{array}\right.\right)$ by $D=\diag (d_{11},\ldots, d_{nn})$.
+
+        For example $\diag(1,2,3)$ denotes the diagonal matrix $\left.\left(\begin{array}{ccc}1&0&0\\0&2&0\\0&0&3\end{array}\right.\right)$.
+    }
+
+    \newd{46}{
+        Let $V$ be a vector space over $\F$ and $T:V\to V$ a linear map.
+
+        We say that $\tbf{v}\in V$ is \tbf{an eigenvector for} $T$ if $\tbf{v}\neq \tbf{0}$ and $T(\tbf{v})=\la \tbf{v}$ for some $\la\in\F$.
+
+        We call the scalar $\la\in\F$ an \tbf{eigenvalue} of $T$.
+
+        Let $E_\la=\{\tbf{v}\in V\mid T(\tbf{v}=\la \tbf{v})\}$. We call $E_\la$ the \tbf{eigenspace for eigenvalue $\la$}.
+    }
+
+    \newt{68}{
+        Let $V$ be a vector space over $\F$ and $T:V\to V$ a linear map. For any $\la\in\F$, the set $E_\la$ is a subspace.
+    }
+
+    \newco{12}{
+        Let $V$ be a vector space over $\F$ and $T:V\to V$ a linear map. For any $\la\in\F$ we have $E_\la=N(\la \tbf{I}_V-T)$.
+    }
+
+    \newd{47}{
+        Let $V$ be a finite dimensional vector space over $\F$ and $T:V\to V$ a linear map.
+
+        Set $C_T(x)=\det(x\tbf{I}_V-T)$. We call $C_T$ the \tbf{characteristic polynomial} of $T$.
+
+        Similarly, for $A\in\mat{n}{n}$ we define $C_A(x)=\det(x\tbf{I}_V-A)$, and call $C_A$ the characteristic polynomial of $A$.
+    }
+
+    \newt{69}{
+        Let $V$ be a finite dimensional vector space over $\F$ and $T:V\to V$ a linear map. Let $n=\dim V$. 
+        \begin{enumerate}
+            \item $C_T$ is a polynomial of degree $n$ and the coefficient of $x^n$ is 1.
+            \item $\la\in\F$ is an eigenvalue of $T$ if and only if $C_T(\la)=0$. That is, the roots of $C_T$ are precisely the eigenvalues of $T$.
+            \item For all eigenvalues $\la\in\F$, the corresponding eigenvectors can be found by solving the homogeneous system $(\la \tbf{I}-T)(\tbf{x})=\tbf{0}_V$.
+        \end{enumerate}
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+\np
+
+\newch[Matrix Algebra (Appendix A)]{ch999}{
+    \newd[Matrix Multiplication]{def86}{
+        Let $A\in\mathscr{M}_{m\times n}(\F)$ and $B\in\mathscr{M}_{n\times k}(\F)$. We define their product $AB\in\mathscr{M}_{m\times k}(\F)$ as follows: for $i\in\{1,\ldots,m\}$ and $j\in\{1,\ldots,k\}$ the $ij$-entry of the product $AB$ is given by 
+        
+        \[(AB)_{ij}=\sum_{l=1}^n A_{il}B_{lj}.\]
+
+        \newn{
+            $AB\neq BA$.
+        }
+    }
+
+    \newd[Special Matrices]{def87}{
+        For each $n,m\in\N$ we define the following matrices:
+        \begin{enumerate}
+            \item $O_{m,n}\in\mathscr{M}_{m\times n}(\F)$ - the matrix consisting of all 0's. In other words $(O_{m,n})_{i,j}=0$ for all $i\in\{1,\ldots,m\}$ and $j\in\{1,\ldots,n\}$. 
+            \item $I_n\in\mathscr{M}_{n\times n}(\F)$ - the matrix with 1's on the diagonals, and 0 in all other entries. In other words 
+            
+            $$(I_n)_{ij}=\begin{cases}1&\text{if }i=j\\0&\text{if }i\neq j\end{cases}$$\\
+        \end{enumerate}
+
+        \newm{
+            $$O_{2,3}= \begin{pmatrix}0&0&0\\0&0&0\\\end{pmatrix}$$
+        
+            $$I_3=\begin{pmatrix}1&0&0\\0&1&0\\0&0&1\\\end{pmatrix}$$
+        }
+    }
+
+    
+
+    \newt{thm124}{
+        Let $\mathbb{F}$ be a field, $A, A_1, A_2 \in \mathscr{M}_{\mathbf{m} \times \mathbf{n}}(\mathbb{F}), B, B_1, B_2 \in \mathcal{M}_{n \times k}(\mathbb{F}), C \in \mathcal{M}_{k \times p}(\mathbb{F})$ and $c \in \mathbb{F}$.
+        
+        1. $A(B C)=(A B) C$
+        
+        2. $\left(A_1+A_2\right) B=A_1 B+A_2 B$
+        
+        3. $A\left(B_1+B_2\right)=A B_1+A B_2$
+        
+        4. $I_m A=A=A I_n$
+        
+        5. $\mathrm{O}_{r m} A=\mathrm{O}_{r n}$ for any 
+        $r \in \mathbb{N}$.
+        
+        6. $A(c B)=c(A B)=\left(c \mathrm{I}_m\right) A B=A B\left(c \mathrm{I}_k\right)=A\left(c \mathrm{I}_n\right) B$.
+    }
+
+    \newd[Invertibility]{def88}{
+        Let $A\in\mathscr{M}_{n\times n}(\F)$. We say that $A$ is \tbf{invertible} if there exists a matrix $B\in\mathscr{M}_{n\times n}(\F)$ so that $AB=I_n=BA$. 
+    }
+
+    \newt{thm125}{
+        Let $A,B\in\mathscr{M}_{n\times n}(\F)$. 
+        \begin{enumerate}
+            \item If $A$ is invertible, then the inverse of $A$ is unique.
+            \item If $A$ is invertible, then $A^{-1}$ is also invertible.
+            \item If $A$ and $B$ are invertible, then $AB$ is invertible.
+            \item $I_n$ is invertible.
+            \item If $AB=I_n$, then $A$ is invertible and $B=A^{-1}$.
+        \end{enumerate}
+    }
+
+    \newd[$A^t$]{def89}{
+        Let $A\in\mathscr{M}_{m\times n}(\F)$. We define the matrix $A^t\in\mathscr{M}_{n\times m}(\F)$  by:
+
+        \[(A^t)_{ij}=A_{ji}.\]
+
+        In other words, to obtain $A^t$ we ``swap the rows and columns of A."
+    }
+
+    \newd[Symmetric]{def90}{
+        We say that $A\in\mathscr{M}_{n\times n}(\F)$ is \tbf{symmetric} if $A^t=A$. We denot ethe set of all symmetric matrices by \tbf{Sym}$_n(\F)$.
+
+        We say that $A\in\mathscr{M}_{n\times n}(\F)$ is \tbf{skew-symmetric} if $A^t=-A$. We denote the set of all skew-symmetric matrices by \tbf{Sk}$_n(\F)$.
+    }
+
+    \newt{thm126}{
+        Let $A, B \in \mathscr{M}_{\mathbf{m} \times \mathbf{n}}(\mathbb{F}), C \in \mathscr{M}_{n \times k}(\mathbb{F})$ and $c \in \mathbb{F}$.
+        
+        1. $(A+B)^t=A^t+B^t$
+        
+        2. $(c A)^t=c A^t$
+        
+        3. $\left(A^t\right)^t=A$
+        
+        4. $(A C)^t=C^t A^t$.
+        
+        5. In the case that $m=n$, we also have that if $A \in \mathscr{M}_{\mathbf{n} \times \mathbf{n}}(\mathbb{F})$ is invertible, then $A^t \in \mathscr{M}_{\mathbf{n} \times \mathbf{n}}(\mathbb{F})$ is invertible and $\left(A^t\right)^{-1}=\left(A^{-1}\right)^t$.
+    }
+
+    \newd[Diagonal and Triangular]{def91}{
+        We say that $A$ is \tbf{diagonal} if $A_{ij}=0$ for all $i\neq j$. 
+
+        Let $A\in\mathscr{M}_{n\times n}(\F)$. We say that $A$ is \tbf{upper triangular} if $A_{ij}=0$ for all $i>j$. This means that all entries below the diagonal of $A$ must be 0.
+
+        Similarily, we say that $A$ is \tbf{lower triangular} if $A_{ij}=0$ for all $i<j$. This means that all entries above the diagonal of $A$ must be 0.
+
+        We say that $A$ is \tbf{strictly upper-triangular} if $A_{ij}=0$ for all $i\geq j$. 
     }
 }
 
