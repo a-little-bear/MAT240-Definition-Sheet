@@ -994,6 +994,79 @@
             \item For all eigenvalues $\la\in\F$, the corresponding eigenvectors can be found by solving the homogeneous system $(\la \tbf{I}-T)(\tbf{x})=\tbf{0}_V$.
         \end{enumerate}
     }
+
+    \newd{48}{
+        Let $V$ be a finite dimensional vector space over $\F$ and $T:V\to V$ a linear map. We say that $T$ is \tbf{diagonalizable} if there exists a basis $|be$ of $B$ so that $[T]_\be$ is a diagonal matrix.
+
+        We say that $A\in\mat{n}$ is \tbf{diagonalizable} if there eixsts an invertible matrix $P$ and diagonal matrix $D$ so that $A=PDP^{-1}$.
+    }
+
+    \newt[Alternate Characterizations of Diagonalizability]{70}{
+        1. Let $V$ be a finite dimensional vector space over F and $T{: }V\to V$ a linear map. $T$ is diagonalizable if and only if there exists a basis of $V$ consisting of eigenvectors for $T.$ 
+
+        $2. A\in\mathscr{M}_{\mathbf{n}\times\mathbf{n}}$(F) is diagonalizable if and only if $A$ is similar to a diagonal matrix.
+
+        $3. A\in\mathscr{M}_{\mathbf{n}\times\mathbf{n}}(\mathcal{F})$ is diagonalizable if and only if $T_A{:}\mathbb{F}^n\to\mathbb{F}^n$ is a diagonalizable linear map.
+    }
+
+    \newt[Test for Diagonalization]{71}{
+        Let $V$ be a finite dimensional vector space over $\F$ and $T: V\to V$ a linear map.
+
+        $T$ is diagonalizable if and only if all the conditions here are met:
+
+        1. The characteristic polynomial $C_T(x)=\prod_{i=1}^k\left(x-\lambda_i\right)^{m_i}$ splits over $\mathbb{F}$.*
+
+        2. For each eigenvalue $\lambda_i$ we have $m_i=\operatorname{dim} E_i$.
+
+        If these conditions are met, then we obtain a diagonalizing basis $\beta$ as follows:
+
+        1. For each eigenvalue $\lambda_i$ find a basis $\beta_i$ of $E_i=N\left(\lambda_i \mathrm{I}_V-T\right)$ by solving the corresponding system.
+
+        2. Set $\beta=\beta_1 \cup \cdots \cup \beta_k$.
+
+        3. Then $[T]_\beta=\operatorname{diag}\left(\lambda_1, \ldots, \lambda_n\right)$
+
+    }
+    \newco[The "Matrix" Test for Diagonalization]{13}{
+        Let $A \in \mathscr{M}_{\mathbf{n} \times \mathbf{n}}(\mathbb{F})$. Then $A$ is diagonalizable if and only if all the following conditions are met:
+    
+        1. The characteristic polynomial $C_A(x)=\prod_{i=1}^k\left(x-\lambda_i\right)^{m_i}$ splits over $\mathbb{F}$.
+    
+        2. For each eigenvalue $\lambda_i$ we have $m_i=\operatorname{dim} E_i$.
+        
+        If these conditions are met, then we obtain $P, D$ as follows:
+    
+        1. For each eigenvalue $\lambda_i$ find a basis $\beta_i$ of $E_i=N\left(\lambda_i \mathrm{I}-A\right)$ by solving the corresponding system.
+        
+        2. Moreover, the matrix $P$ has columns $\mathbf{v}_1, \mathbf{v}_2, \ldots \mathbf{v}_n$, where $\mathbf{v}_i \in \beta$ are eigenvectors (expressed as columns in "standard coordinates"). The matrix $D=\operatorname{diag}\left(\lambda_1, \ldots, \lambda_n\right) .^{. *}$
+    
+    }
+
+    \newd{49}{
+        Suppose that $T:V\to V$ is linear and $\la\in\F$ is an eigenvalue. Then we know that $|la$ is a root of $C_T$, so we have $C_T(x)=(x-\la)^m p(x)$ for some $m\in\N$ and $p\in \T{P}(\F)$ so that $p(\la)\ne 0$.
+
+        We call $m$ the multiplicity of $\la$.
+    }
+
+    \newl{3}{
+        Let $V$ be a finite dimensional vector space over $\F$ and $T: V\to V$ a linear map.
+
+        If $\la$ is an eigenvalue of $T$, then we have $1\le \dim E_\la \le m_\la$. 
+    }
+
+    \newl{4}{
+        Let $V$ be a finite dimensional vector space over $\F$ and $T: V\to V$ a linear map.
+
+        If $\la_1, \la_2$ are distinct eigenvalues for $T$, and $S_1\subseteq E_1$, $S_2\subseteq E_2$ linearly independent subsets of eigenvectors, then $S_1\cup S_2$ is linearly independent.
+    }
+
+    \newt[Invariant Subspaces and Diagonalization]{72}{
+        Let $V$ be a finite dimensional vector space over $\F$ and $T: V\to V$ be a linear map. The following two conditions are equivalent: 
+        \begin{enumerate}
+            \item $T$ is diagonalizable.
+            \item There exists one-dimensional invariant suspaces $W_1,\ldots,W_n$ so that $V=W_1\oplus\cdots\oplus W_n$.
+        \end{enumerate}
+    }
     
 }
 
@@ -1107,6 +1180,7 @@
 
         We say that $A$ is \tbf{strictly upper-triangular} if $A_{ij}=0$ for all $i\geq j$. 
     }
+    
 }
 
 \end{document}
