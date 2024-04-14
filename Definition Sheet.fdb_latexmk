@@ -1,8 +1,8 @@
 # Fdb version 4
-["pdflatex"] 1712665314 "c:/Users/alitt/OneDrive - University of Toronto/Courses/Mathematics/MAT240/Definition Sheet/MAT240-Definition-Sheet/Definition Sheet.tex" "Definition Sheet.pdf" "Definition Sheet" 1712665326 0
-  "Definition Sheet.aux" 1712665326 11447 e1cfd9261d70abc4deef6a2571971a03 "pdflatex"
-  "Definition Sheet.out" 1712665316 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "Definition Sheet.tex" 1712665301 57461 55ad746712a98d1ad8daed3a02d64f07 ""
+["pdflatex"] 1713058348 "c:/Users/alitt/OneDrive - University of Toronto/Courses/Mathematics/MAT240/Definition Sheet/MAT240-Definition-Sheet/Definition Sheet.tex" "Definition Sheet.pdf" "Definition Sheet" 1713058360 0
+  "Definition Sheet.aux" 1713058360 11447 e1cfd9261d70abc4deef6a2571971a03 "pdflatex"
+  "Definition Sheet.out" 1713058350 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "Definition Sheet.tex" 1713058346 57461 8ae8f3e5d28650b6a0892f264298323e ""
   "LatexTemplate/clsfiles/mat240.sty" 1711634374 234 9e2e95d2b00f17ba810955472ff15ffe ""
   "LatexTemplate/clsfiles/nightsky.png" 1711595311 1103267 0d8329dfba274c358611296ede5defc3 ""
   "LatexTemplate/clsfiles/qunwang.png" 1711595311 338142 3e89f57b64238d0f62e84df556289001 ""
@@ -281,7 +281,7 @@
   "c:/Program Files/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1699479960 4753631 ce11096d3ddebebb488d7abe23a051aa ""
   "c:/Program Files/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1699480103 8213025 3bd61feff7b9dff35f8a668730b4a750 ""
   "c:/Program Files/texlive/2023/texmf.cnf" 1699479938 713 e69b156964470283e0530f5060668171 ""
-  "c:/Users/alitt/OneDrive - University of Toronto/Courses/Mathematics/MAT240/Definition Sheet/MAT240-Definition-Sheet/Definition Sheet.tex" 1712665301 57461 55ad746712a98d1ad8daed3a02d64f07 ""
+  "c:/Users/alitt/OneDrive - University of Toronto/Courses/Mathematics/MAT240/Definition Sheet/MAT240-Definition-Sheet/Definition Sheet.tex" 1713058346 57461 8ae8f3e5d28650b6a0892f264298323e ""
   (generated)
   "Definition Sheet.aux"
   "Definition Sheet.log"
