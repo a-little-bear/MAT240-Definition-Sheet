@@ -334,6 +334,10 @@ INPUT c:/Program Files/texlive/2023/texmf-dist/tex/generic/poormanlog/poormanlog
 INPUT c:/Program Files/texlive/2023/texmf-dist/tex/generic/poormanlog/poormanlog.tex
 INPUT c:/Program Files/texlive/2023/texmf-dist/tex/generic/poormanlog/poormanlog.tex
 INPUT c:/Program Files/texlive/2023/texmf-dist/tex/generic/poormanlog/poormanlog.tex
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/generic/ulem/ulem.sty
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/generic/ulem/ulem.sty
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/latex-fonts/lasy6.tfm
 INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
 INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
 INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/tools/verbatim.sty
@@ -370,7 +374,6 @@ INPUT LatexTemplate/clsfiles/mat240.sty
 INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/lm/ot1lmr.fd
 INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/lm/ot1lmr.fd
 INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/lm/ot1lmr.fd
-INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map
 INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmr10.tfm
 INPUT ./Definition Sheet.aux
 INPUT ./Definition Sheet.aux

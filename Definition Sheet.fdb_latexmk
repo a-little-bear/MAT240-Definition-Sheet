@@ -1,12 +1,12 @@
 # Fdb version 4
-["pdflatex"] 1713058348 "c:/Users/alitt/OneDrive - University of Toronto/Courses/Mathematics/MAT240/Definition Sheet/MAT240-Definition-Sheet/Definition Sheet.tex" "Definition Sheet.pdf" "Definition Sheet" 1713058360 0
-  "Definition Sheet.aux" 1713058360 11447 e1cfd9261d70abc4deef6a2571971a03 "pdflatex"
-  "Definition Sheet.out" 1713058350 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["pdflatex"] 1713422160 "c:/Users/alitt/OneDrive - University of Toronto/Courses/Mathematics/MAT240/Definition Sheet/MAT240-Definition-Sheet/Definition Sheet.tex" "Definition Sheet.pdf" "Definition Sheet" 1713422172 0
+  "Definition Sheet.aux" 1713422172 11447 e1cfd9261d70abc4deef6a2571971a03 "pdflatex"
+  "Definition Sheet.out" 1713422161 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   "Definition Sheet.tex" 1713058346 57461 8ae8f3e5d28650b6a0892f264298323e ""
   "LatexTemplate/clsfiles/mat240.sty" 1711634374 234 9e2e95d2b00f17ba810955472ff15ffe ""
   "LatexTemplate/clsfiles/nightsky.png" 1711595311 1103267 0d8329dfba274c358611296ede5defc3 ""
   "LatexTemplate/clsfiles/qunwang.png" 1711595311 338142 3e89f57b64238d0f62e84df556289001 ""
-  "LatexTemplate/clsfiles/shortcuts.sty" 1711595311 5184 0a5135f9df974e9785400db067e16919 ""
+  "LatexTemplate/clsfiles/shortcuts.sty" 1713422159 5259 b6ce8f564be885d9bacedb320fc7e9e8 ""
   "LatexTemplate/clsfiles/stars.png" 1711595311 10202440 e9ebc30d41907e70f1acc14a1d2c2c3f ""
   "LatexTemplate/clsfiles/tcbthm.sty" 1711595311 13615 60fb8a51e462dfbd0d798938f4f72e52 ""
   "LatexTemplate/hw.cls" 1711595311 14485 b3aa6c44391e6fddd3316e562d36c5a8 ""
@@ -24,6 +24,7 @@
   "c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/fourier/fourier-alt.tfm" 1699473279 220 26d85b63a783b1f1fab5622acbd07990 ""
   "c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/fourier/fourier-orns.tfm" 1699473279 520 365c2476e5f6fcc92faf0f42b82d1a21 ""
   "c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/fourier/futrorn.tfm" 1699473279 624 bc503f137702035aa41af1e10391a422 ""
+  "c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/latex-fonts/lasy6.tfm" 1699474783 520 4889cce2180234b97cad636b6039c722 ""
   "c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/lm/lmex10.tfm" 1699475139 992 ce925c9346c7613270a79afbee98c070 ""
   "c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/lm/lmmi10.tfm" 1699475139 1528 6d36b2385e0ca062a654de6ac59cb34f ""
   "c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/lm/lmmi12.tfm" 1699475139 1524 753b192b18f2991794f9d41a8228510b ""
@@ -147,6 +148,7 @@
   "c:/Program Files/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def" 1699476961 6950 8524a062d82b7afdc4a88a57cb377784 ""
   "c:/Program Files/texlive/2023/texmf-dist/tex/generic/poormanlog/poormanlog.sty" 1699477176 597 391151e948beb1eb43b7d9ec4da5a5ab ""
   "c:/Program Files/texlive/2023/texmf-dist/tex/generic/poormanlog/poormanlog.tex" 1699477176 9865 416093a4150a343b7901d8046531f2bd ""
+  "c:/Program Files/texlive/2023/texmf-dist/tex/generic/ulem/ulem.sty" 1699479255 15682 94f55b803e160cf7fb6e4d77d07cfe1d ""
   "c:/Program Files/texlive/2023/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty" 1699479429 7008 f92eaa0a3872ed622bbf538217cd2ab7 ""
   "c:/Program Files/texlive/2023/texmf-dist/tex/generic/xint/xint.sty" 1699479784 52844 b2280d4711a1a9bfe9b9924bcce5d2e4 ""
   "c:/Program Files/texlive/2023/texmf-dist/tex/generic/xint/xintcore.sty" 1699479784 70276 dfb1237572f73dcae5167a669f9fb810 ""

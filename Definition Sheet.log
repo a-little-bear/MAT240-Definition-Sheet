@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.8)  13 APR 2024 21:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.8)  18 APR 2024 02:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -813,38 +813,49 @@ Package: xinttrig 2022/06/10 v1.4m Trigonometrical functions for xintexpr (JFB)
 Package: xintlog 2022/06/10 v1.4m Logarithms and exponentials for xintexpr (JFB)
  (c:/Program Files/texlive/2023/texmf-dist/tex/generic/poormanlog/poormanlog.sty
 Package: poormanlog 2022/05/25 v0.07 base 10 log and pow with 9 digits (JFB)
- (c:/Program Files/texlive/2023/texmf-dist/tex/generic/poormanlog/poormanlog.tex))))) (c:/Program Files/texlive/2023/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
+ (c:/Program Files/texlive/2023/texmf-dist/tex/generic/poormanlog/poormanlog.tex)))) (c:/Program Files/texlive/2023/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box123
+\UL@hyphenbox=\box124
+\UL@skip=\skip77
+\UL@hook=\toks64
+\UL@height=\dimen304
+\UL@pe=\count360
+\UL@pixel=\dimen305
+\ULC@box=\box125
+Package: ulem 2019/11/18
+\ULdepth=\dimen306
+)) (c:/Program Files/texlive/2023/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
 Package: tcolorbox 2023/09/26 version 6.1.0 text color boxes
  (c:/Program Files/texlive/2023/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2022-07-02 v1.5u LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks64
-\verbatim@line=\toks65
+\every@verbatim=\toks65
+\verbatim@line=\toks66
 \verbatim@in@stream=\read3
 ) (c:/Program Files/texlive/2023/texmf-dist/tex/latex/environ/environ.sty
 Package: environ 2014/05/04 v0.3 A new way to define environments
  (c:/Program Files/texlive/2023/texmf-dist/tex/latex/trimspaces/trimspaces.sty
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
-\tcb@titlebox=\box123
-\tcb@upperbox=\box124
-\tcb@lowerbox=\box125
-\tcb@phantombox=\box126
-\c@tcbbreakpart=\count360
-\c@tcblayer=\count361
-\c@tcolorbox@number=\count362
-\tcb@temp=\box127
-\tcb@temp=\box128
-\tcb@temp=\box129
+\tcb@titlebox=\box126
+\tcb@upperbox=\box127
+\tcb@lowerbox=\box128
+\tcb@phantombox=\box129
+\c@tcbbreakpart=\count361
+\c@tcblayer=\count362
+\c@tcolorbox@number=\count363
 \tcb@temp=\box130
+\tcb@temp=\box131
+\tcb@temp=\box132
+\tcb@temp=\box133
  (c:/Program Files/texlive/2023/texmf-dist/tex/latex/tcolorbox/tcbbreakable.code.tex
 Library (tcolorbox): 'tcbbreakable.code.tex' version '6.1.0'
 (c:/Program Files/texlive/2023/texmf-dist/tex/latex/pdfcol/pdfcol.sty
 Package: pdfcol 2022-09-21 v1.7 Handle new color stacks for pdfTeX (HO)
 )
 Package pdfcol Info: New color stack `tcb@breakable' = 1 on input line 23.
-\tcb@testbox=\box131
-\tcb@totalupperbox=\box132
-\tcb@totallowerbox=\box133
+\tcb@testbox=\box134
+\tcb@totalupperbox=\box135
+\tcb@totallowerbox=\box136
 ) (c:/Program Files/texlive/2023/texmf-dist/tex/latex/tcolorbox/tcbskins.code.tex
 Library (tcolorbox): 'tcbskins.code.tex' version '6.1.0'
 (c:/Program Files/texlive/2023/texmf-dist/tex/latex/tikzfill/tikzfill.image.sty
@@ -853,7 +864,7 @@ Package: tikzfill.image 2023/08/08 v1.0.1 Image filling library for TikZ
 Package: tikzfill-common 2023/08/08 v1.0.1 Auxiliary code for tikzfill
 ) (c:/Program Files/texlive/2023/texmf-dist/tex/latex/tikzfill/tikzlibraryfill.image.code.tex
 File: tikzlibraryfill.image.code.tex 2023/08/08 v1.0.1 Image filling library
-\l__tikzfill_img_box=\box134
+\l__tikzfill_img_box=\box137
 )) (c:/Program Files/texlive/2023/texmf-dist/tex/latex/tcolorbox/tcbskinsjigsaw.code.tex
 Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '6.1.0'
 )) (c:/Program Files/texlive/2023/texmf-dist/tex/latex/tcolorbox/tcbtheorems.code.tex
@@ -868,25 +879,25 @@ Package: wasysym 2020/01/19 v2.4 Wasy-2 symbol support package
 LaTeX Font Info:    Overwriting symbol font `wasy' in version `bold'
 (Font)                  U/wasy/m/n --> U/wasy/b/n on input line 93.
 )
-\c@example=\count363
-\c@remark=\count364
-\c@tcb@cnt@question=\count365
-\c@tcb@cnt@claim=\count366
-\c@tcb@cnt@proposition=\count367
-\c@tcb@cnt@definition=\count368
-\c@tcb@cnt@corollary=\count369
-\c@tcb@cnt@theorem=\count370
-\c@tcb@cnt@lemma=\count371
+\c@example=\count364
+\c@remark=\count365
+\c@tcb@cnt@question=\count366
+\c@tcb@cnt@claim=\count367
+\c@tcb@cnt@proposition=\count368
+\c@tcb@cnt@definition=\count369
+\c@tcb@cnt@corollary=\count370
+\c@tcb@cnt@theorem=\count371
+\c@tcb@cnt@lemma=\count372
  (c:/Program Files/texlive/2023/texmf-dist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
-\@vwid@box=\box135
-\sift@deathcycles=\count372
-\@vwid@loff=\dimen304
-\@vwid@roff=\dimen305
+\@vwid@box=\box138
+\sift@deathcycles=\count373
+\@vwid@loff=\dimen307
+\@vwid@roff=\dimen308
 )
-\c@tcb@cnt@exercise=\count373
-\c@tcb@cnt@unit=\count374
-\c@tcb@cnt@chapter=\count375
+\c@tcb@cnt@exercise=\count374
+\c@tcb@cnt@unit=\count375
+\c@tcb@cnt@chapter=\count376
 )) (c:/Program Files/texlive/2023/texmf-dist/tex/latex/parskip/parskip.sty
 Package: parskip 2021-03-14 v2.0h non-zero parskip adjustments
 ) (./LatexTemplate/clsfiles/mat240.sty
@@ -953,17 +964,17 @@ LaTeX Font Info:    ... okay on input line 12.
 
 (c:/Program Files/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count376
-\scratchdimen=\dimen306
-\scratchbox=\box136
-\nofMPsegments=\count377
-\nofMParguments=\count378
-\everyMPshowfont=\toks66
-\MPscratchCnt=\count379
-\MPscratchDim=\dimen307
-\MPnumerator=\count380
-\makeMPintoPDFobject=\count381
-\everyMPtoPDFconversion=\toks67
+\scratchcounter=\count377
+\scratchdimen=\dimen309
+\scratchbox=\box139
+\nofMPsegments=\count378
+\nofMParguments=\count379
+\everyMPshowfont=\toks67
+\MPscratchCnt=\count380
+\MPscratchDim=\dimen310
+\MPnumerator=\count381
+\makeMPintoPDFobject=\count382
+\everyMPtoPDFconversion=\toks68
 ) (c:/Program Files/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -989,7 +1000,7 @@ Package microtype Info: No adjustment of character kerning.
  (c:/Program Files/texlive/2023/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 )
-\c@lstlisting=\count382
+\c@lstlisting=\count383
 Package hyperref Info: Link coloring ON on input line 12.
  (./Definition Sheet.out) (./Definition Sheet.out)
 \@outlinefile=\write4
@@ -1244,15 +1255,15 @@ Package rerunfilecheck Info: File `"Definition Sheet".out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 38943 strings out of 474272
- 735725 string characters out of 5744472
+ 39034 strings out of 474272
+ 736863 string characters out of 5744472
  2011533 words of memory out of 5000000
- 60024 multiletter control sequences out of 15000+600000
- 629686 words of font info for 168 fonts, out of 8000000 for 9000
+ 60110 multiletter control sequences out of 15000+600000
+ 629792 words of font info for 169 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  118i,15n,121p,2911b,2613s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/fourier/fourier-orns.pfb><c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx7.pfb><c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb><c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmex10.pfb><c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi5.pfb><c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi7.pfb><c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr5.pfb><c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmri10.pfb><c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy5.pfb><c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy7.pfb><c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb><c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/starfont/starfont.pfb><c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/wasy-type1/wasy10.pfb>
-Output written on "Definition Sheet.pdf" (26 pages, 20288398 bytes).
+Output written on "Definition Sheet.pdf" (26 pages, 20288374 bytes).
 PDF statistics:
  663 PDF objects out of 1000 (max. 8388607)
  565 compressed objects within 6 object streams

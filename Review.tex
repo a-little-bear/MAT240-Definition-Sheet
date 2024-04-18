@@ -1,0 +1,141 @@
+
+\documentclass[11pt, cyan, night, 1in]{LatexTemplate/hw}
+
+\def\course{MAT240: Algebra I}
+\def\headername{Review Notes}
+\def\name{Joseph Siu}
+\def\email{joseph.siu@mail.utoronto.ca}
+\def\logo{\clsfiles/qunwang}
+\renewcommand{\nightmodebackground}{\clsfiles/tree}
+
+\begin{document}
+
+\coverpage[\clsfiles/night]
+
+\section{Fields}
+
+Commutativity, Associativity, Distributivity, Identity, Inverse.
+
+\section{Modular Arithmetic}
+
+$[a]+[b]=[a+b]$, $[a]\cd[b]=[a\cd b]$.
+
+\newcl{1}{
+    All elements in $\Z_n$ are invetible if and only if $n$ is a prime.
+}
+
+\begin{proof}
+    Assume $n=ab$, then assume for contradiction $ac=1 \pmod n$ for some $c$, then $ac-ny=1$ for some $y$, and $ac-aby=1$ so $a(c-by)=1$ so $a$ divides $1$, contradiction.
+\end{proof}
+
+\newcl{2}{
+    $a$ is invertible in $\Z_n$ if and only if $\gcd(a,n)=1$.
+}
+
+\newp{
+    Assume $a$ invertible where $ac=1\pmod n$, and assume $\gcd(a,n)=b>1$, then $ac-nx=1$ for some $x$, however right side not divisible by $b$ so contradiction.
+
+    Assume $\gcd(a,n)=1$, then $ax+ny=1$ for some $x,y$, so $ax=1\pmod n$.
+}
+
+\section{Complex Number}
+
+Modulus is just the length of the line, which by pathagorean theorem is $\sqrt{x^2+y^2}$.
+
+To find multiplicative inverse, we first multiply the conjugate, then divide by modulus squared so that it is projected to the real line then scaled to 1. That is, $\bra{\frac1{x^2+y^2}}\bra{x-yi}\bra{x+yi}=1$.
+
+Polar form is a scaled radius of the unit circle, that is, first rotate the line from 0 to 1 by $\theta$, then scale by the modulus. Here $\tan\th=\frac yx$. To calculate we can also consider $\sin$ and $\cos$ separately, that is, modulus $x=r\cos\th$ and $y=r\sin\th$.
+
+\section{Polynomial}
+
+\newd[Polynomial Division]{1}{
+    $f(x)=q(x)g(x)+r(x)$, where $\begin{cases}
+        \deg r < \deg g & \text{if } g\neq 0\\
+        r=0 & \text{if } g=0
+    \end{cases}$.
+
+    $g$ divides $f$ if $r\is 0$.
+}
+
+To find the irreducible polynomials, we can first eliminate the combination of coefficients that guarantee an integer root. 
+
+\newt[FTA]{1}{
+    Every non-constant polynomial has a root over $\C$ (every non-constant polynomial can be factored into products of linear factors over $\C$).
+}
+
+\section{Matrix}
+
+(This section assumed that the reader is already familiar with most of the definitions of MAT240 regarding matrices. This section will reinforce the connections between the ideas of matrices and linear transformations.)
+
+Since every matrix represents a linear transformation and vice versa, to understand matrix, it is equivalent to understand the linear transformation that corresponds to the matrix.
+
+First consider a linear transformation and its matrix. The set that contains the columns of the matrix spans the image of the linear transformation. That is, consider a vector in the domain, then the output of the linear transformation given this vector is the summation of the $i^{\T{th}}$ entry of the vector times the $i^{\T{th}}$ column of the matrix. What this means is that the matrix stores some vectors (columns) that can be scaled and added (using the given vector) to form any vector in the image.
+
+What we have discussed was the case that a matrix is multipled with a vector at the right, if a matrix is multiplied with another matrix at the right instead, we can treat the right matrix as a set of vectors (columns), then we perform the same operation as before, then put all the results together and form another matrix (set of column vectors). Furthermore, If two matrices are multiplied together, this can be treated as a composition of linear transformations from right to left.
+
+Now, we can see the columns of the matrix span the image of the linear transformation, but how do we know if the columns form a basis\footnote{An ordered linearly independent set that spans the space.} of the image (column space)\footnote{Space, or vector space, is a set of vectors that are closed under addition and scalar multiplication.}? We need to check if they are linearly independent or not, the easiest way would be change the matrix to RREF, and see if one column can be expressed as a linear combination of the others or not (if it is full rank then the columns are dependent thus form a basis). Here note that when performing row reductions, the column space (image) has changed, however since we only care whether they are independent or not, so row operations won't affect the result. 
+
+Until now, we have discussed matrices from a column perspective as combinations / sets of column vectors. However, when solving solution like $Ax=B$, we can think this as a system of linear equations, where row operations won't affect the solution since all operations are reversable, for example: \[
+    \bra{\begin{array}{ccc|c}
+        1 & 0 & 0  & a\\
+        0 & 1 & 0  & b\\
+        0 & 0 & 1 & c
+    \end{array}}:\quad\bra{\begin{array}{ccc|c}
+        1 & 0 & 0  & a\\
+        1 & 1 & 0  & b \ra b + a\\
+        0 & 0 & 1 & c
+    \end{array}} \quad \bra{\begin{array}{ccc|c}
+        1 & 0 & 0  & a\\
+        0 & 0 & 1  & b \ra c\\
+        0 & 1 & 0 & c \ra b
+    \end{array}} \quad \bra{\begin{array}{ccc|c}
+        1 & 0 & 0  & a\\
+        1 & \frac12 & 0  & b \ra \frac{b}{2}\\
+        0 & 0 & 1 & c
+    \end{array}} 
+    \]
+
+are the transformations that add the first row to the second row; swap the last 2 rows; and multiply the second row by $\frac12$ respectively. We can see that the vectors that satisfy the later equations must also satisfy the original equations since we can reverse the operations without changing the equalities:\[
+    \bra{\begin{array}{ccc|c}
+        1 & 0 & 0  & a\\
+        -1 & 1 & 0  & b \ra b + a \ra b + a - a = b\\
+        0 & 0 & 1 & c
+    \end{array}} \quad \bra{\begin{array}{ccc|c}
+        1 & 0 & 0  & a\\
+        0 & 0 & 1  & b \ra c \ra b\\
+        0 & 1 & 0 & c \ra b \ra c
+    \end{array}} \quad \bra{\begin{array}{ccc|c}
+        1 & 0 & 0  & a\\
+        1 & 2 & 0  & b \ra \frac{b}{2} \ra 2\frac{b}{2} = b\\
+        0 & 0 & 1 & c
+    \end{array}} 
+    \]
+
+From here, you can also see why when finding the null space of the image (column space), our row operations won't affect the result, and performing row operations is very helpful not only because we can decrease the numbers of values to look at, but also it is easier to see \tit{how} the columns are depending on others if there are any.
+
+Relating to this discussion, we can see the purpose of row reductions is to transform the given matrix to a diagonalized (or mostly diagonalized) form, so that \tit{some} solutions of the diagonalized matrix remain the same as the original matrix \footnote{We say that the matrices that can diagonalize to the same diagonal matrix are \tit{similar}.}, for example the null space is preserved. 
+
+However just knowing the points that do not change after ``diagonalization'' \footnote{The process of changing a matrix into a diagonalized form, but as we all know what some matrices (not full rank) cannot be fully diagonalized, here comes the Jordan Normal Form which will be discussed in MAT247.} is probably not that interesting enough, in fact, similar matrices also preserve another important property: the eigenspace (eigenvalues). Geometrically the eigenspace contains vectors that are only being streatched by some factor $\la$ after the linear tranasformation. Before we begin, the idea of determinant needs to be introduced.
+
+As commonly known, the determinant of a transformation is simply the ``area / volume / hyper-volume'' determined by the column vectors (the vectors that span the image). We first defind the identity matrix (that is, transformation that its image is spanned by the standard basis) to have determinant 1. Then we define swapping rows or columns as negating the original determinant. What this does intuitively is that the order of ``axis / \crossout{dimension}'' we used to calculate the ``hyper-volume'' of the transformation got changed, which results in flipping the entire ``hyper-volume'' from an external perspective. Lastly, as we can see intuitively, scaling or adding determinants on one ``axis / \crossout{dimension}'' will scale or add the entire ``hyper-volume'' by the same factor or value.
+
+To summerize, we define determinant using the following three definitions:
+\begin{enumerate}
+    \item $\det I = 1$.
+    \item $\det A' = - \det A$ if $A'$ is obtained by swapping 2 rows or 2 columns of $A$.
+    \item $\abs{\begin{array}{cc}
+        ta+x & tb+y\\
+        c & d
+    \end{array}} = t\abs{\begin{array}{cc}
+        a & b\\
+        c & d
+    \end{array}} + \abs{\begin{array}{cc}
+        x & y\\
+        c & d
+    \end{array}}$.
+\end{enumerate}
+
+
+
+
+\end{document}
