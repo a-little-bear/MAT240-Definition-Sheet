@@ -8,9 +8,14 @@
 \def\logo{\clsfiles/qunwang}
 \renewcommand{\nightmodebackground}{\clsfiles/tree}
 
+\useclspackage{mat240}
+
 \begin{document}
 
 \coverpage[\clsfiles/night]
+
+\tableofcontents
+\np
 
 \section{Fields}
 
@@ -67,15 +72,23 @@ To find the irreducible polynomials, we can first eliminate the combination of c
 
 (This section assumed that the reader is already familiar with most of the definitions of MAT240 regarding matrices. This section will reinforce the connections between the ideas of matrices and linear transformations.)
 
+\subsection{How matrices are linear transformations}
+
 Since every matrix represents a linear transformation and vice versa, to understand matrix, it is equivalent to understand the linear transformation that corresponds to the matrix.
 
 First consider a linear transformation and its matrix. The set that contains the columns of the matrix spans the image of the linear transformation. That is, consider a vector in the domain, then the output of the linear transformation given this vector is the summation of the $i^{\T{th}}$ entry of the vector times the $i^{\T{th}}$ column of the matrix. What this means is that the matrix stores some vectors (columns) that can be scaled and added (using the given vector) to form any vector in the image.
 
+\subsection{Matrix multiplications in general}
+
 What we have discussed was the case that a matrix is multipled with a vector at the right, if a matrix is multiplied with another matrix at the right instead, we can treat the right matrix as a set of vectors (columns), then we perform the same operation as before, then put all the results together and form another matrix (set of column vectors). Furthermore, If two matrices are multiplied together, this can be treated as a composition of linear transformations from right to left.
+
+\subsection{Check linearly independency of columns}
 
 Now, we can see the columns of the matrix span the image of the linear transformation, but how do we know if the columns form a basis\footnote{An ordered linearly independent set that spans the space.} of the image (column space)\footnote{Space, or vector space, is a set of vectors that are closed under addition and scalar multiplication.}? We need to check if they are linearly independent or not, the easiest way would be change the matrix to RREF, and see if one column can be expressed as a linear combination of the others or not (if it is full rank then the columns are dependent thus form a basis). Here note that when performing row reductions, the column space (image) has changed, however since we only care whether they are independent or not, so row operations won't affect the result. 
 
-Until now, we have discussed matrices from a column perspective as combinations / sets of column vectors. However, when solving solution like $Ax=B$, we can think this as a system of linear equations, where row operations won't affect the solution since all operations are reversable, for example: \[
+\subsection{From the row perspective}
+
+To now, we have discussed matrices from a column perspective as combinations / sets of column vectors. However, when solving solution like $Ax=B$, we can think this as a system of linear equations, where row operations won't affect the solution since all operations are reversable, for example: \[
     \bra{\begin{array}{ccc|c}
         1 & 0 & 0  & a\\
         0 & 1 & 0  & b\\
@@ -111,11 +124,17 @@ are the transformations that add the first row to the second row; swap the last 
     \end{array}} 
     \]
 
-From here, you can also see why when finding the null space of the image (column space), our row operations won't affect the result, and performing row operations is very helpful not only because we can decrease the numbers of values to look at, but also it is easier to see \tit{how} the columns are depending on others if there are any.
+From here, we can also see why when finding the null space\footnote{Null space contains vectors that are being sent to 0 by the linear transformation / matrix.} of the image (column space), our row operations won't affect the result, and performing row operations is very helpful not only because we can decrease the numbers of values to look at, but also it is easier to see \tit{how} the columns are depending on others if there are any.
+
+\subsection{Purpose of row reductions}
 
 Relating to this discussion, we can see the purpose of row reductions is to transform the given matrix to a diagonalized (or mostly diagonalized) form, so that \tit{some} solutions of the diagonalized matrix remain the same as the original matrix \footnote{We say that the matrices that can diagonalize to the same diagonal matrix are \tit{similar}.}, for example the null space is preserved. 
 
-However just knowing the points that do not change after ``diagonalization'' \footnote{The process of changing a matrix into a diagonalized form, but as we all know what some matrices (not full rank) cannot be fully diagonalized, here comes the Jordan Normal Form which will be discussed in MAT247.} is probably not that interesting enough, in fact, similar matrices also preserve another important property: the eigenspace (eigenvalues). Geometrically the eigenspace contains vectors that are only being streatched by some factor $\la$ after the linear tranasformation. Before we begin, the idea of determinant needs to be introduced.
+\subsection{Other properties of similar matrices}
+
+However just knowing the points that do not change after ``diagonalization'' \footnote{The process of changing a matrix into a diagonalized form, but as we all know what some matrices (not full rank) cannot be fully diagonalized, here comes the Jordan Normal Form which will be discussed in MAT247.} is probably not that interesting enough, in fact, similar matrices also preserve another important property: the eigenvalues. Geometrically the eigenspace contains vectors that are only being streatched by some factor $\la$ after the linear tranasformation. Before we begin, the idea of determinant needs to be introduced.
+
+\subsection{Determinants}
 
 As commonly known, the determinant of a transformation is simply the ``area / volume / hyper-volume'' determined by the column vectors (the vectors that span the image). We first defind the identity matrix (that is, transformation that its image is spanned by the standard basis) to have determinant 1. Then we define swapping rows or columns as negating the original determinant. What this does intuitively is that the order of ``axis / \crossout{dimension}'' we used to calculate the ``hyper-volume'' of the transformation got changed, which results in flipping the entire ``hyper-volume'' from an external perspective. Lastly, as we can see intuitively, scaling or adding determinants on one ``axis / \crossout{dimension}'' will scale or add the entire ``hyper-volume'' by the same factor or value.
 
@@ -134,6 +153,68 @@ To summerize, we define determinant using the following three definitions:
         c & d
     \end{array}}$.
 \end{enumerate}
+
+Moreover, by \hyperlink{https://en.wikipedia.org/wiki/Determinant}{Leibniz formula}, we can calculate the determinant for any square $n\times n$ matrix $A$ as: \[\det A = \sum_{j=1}^n (-1)^{i+j} A_{ij} \det\bra{\tilde{A_{ij}}}\quad \forall i\in\{1,\dots,n\},\] where $\tilde{A_{ij}}$ is defined by removing the $i^{th}$ row and $j^{th}$ column of $A$.
+
+Using these definitions, we can come up with useful properties such as $\det AB = \det A \det B$ and $\det A^T = \det A$, that is, linear transformation through column vectors has the same determinant as linear transformation through row vectors. Last but not least, we can see that similar matrices have the same determinant as their diagonal matrix $$\det A = \det Q^{-1} \det A \det Q = \det Q^{-1} A Q = \det B,$$ and $$\det A=\det P^{-1}\det D\det P=\det P^{-1}DP=\det D,$$ for some similar matrices $B=Q^{-1} A Q$ and diagonal matrix $D$ where $A = P^{-1} D P$. Notice here that the determiant of all corresponding diagonal matrices are the same which the reason will be explained in the next paragraph.
+
+\subsection{Eigenvectors, eigenvalues, and eigenspaces}
+
+Finally, we can discuss what eigenvalues, eigenvectors, and eigenspaces are. To start, eigenvectors are vectors that are only stretched after applying matrix $A$ (or linear transformation $T_A$), namely $Av=\la v$ for some vector $v$ and some constant $\la$. By distributivity we may rearrange this equation to $(A-\la I)v=0$, here $\la$ is a constant to be determined. Since $v$ is non-zero, and is being transformed to the 0-vector through matrix $A-\la I$ (and thus it's linear transformation $T_{A-\la I}$), so $v$ exists if and only if $T_{A-\la I}$ is \tit{not} full rank, or in other words, its columns are linearly dependent. Which we also know that if there exists a column that is dependent from the others, then we may perform column operations to make the row to be $0$, which by Leibniz formula gives the determinant is equal to 0. Thus, we may conclude that as long as $\det \bra{A - \la I} = 0$, there exists a non-zero vector $v$ that satisfies $Av=\la v$, and we will also call such vector an eigenvector with eigenvalue $\la$.
+
+Since the entries of $A$ are constants, and $\la I$ is a diagonal matrix where all diagonal entries are $\la$, to find all possible $\la$, we will treat it as a variable, and apply the Leibniz formula to get a polynomial from $\det\bra{A - \la I} = 0$, which is called the \tit{characteristic} polynomial. Then we can see that the roots of such polynomial gives all possible $\la$ that satisfies the equation $Av=\la v$ for some vector $v$ in the domain. 
+
+So, the eigenvalues of a linear transformation / matrix are the roots of the characteristic polynomial determined using $\det\bra{A - \la I}=0$, the eigenvectors are the vectors that satisfy $Av=\la v$ for some eigenvalue $\la$, and the eigenspace is the space that contains all eigenvectors that correspond to the \tit{same} eigenvalue.
+
+\section{Vector Spaces}
+
+$T(ax+y)=aT(x)+T(y)$, $T(0)=0$.
+
+The dimension of a vector space is the size (cardinality) of the basis of the vector space. By replacement theorem, all bases of a vector space have the same size.
+
+\section{Subspaces}
+
+$\{0\}$ and the space itself are trivial subspaces, others are called non-trivial subspaces. Subspace is just a subset of another vector space that is also a vector space.
+
+Common subspaces include the null space (kernel) and the column space (image) of a matrix\footnote{By dimension theorem we have that $\dim V = \dim \T{im} T + \dim N(T)$ for all linear transformation $T: V\to W$.}.
+
+If $V=W_1+W_2$ and $W_1\cap W_2=\{0\}$, then $V=W_1\oplus W_2$. That is, if $V$ is the sum of two ``disjoint'' subspaces (only intersect at $0$), then $V$ is called the direct sum of $W_1$ and $W_2$.
+
+\section{System of equations}
+
+To solve $Ax=B$, we augment the matrix $A$ to $A\mid B$, then perform row operations to make the left side to be in its RREF form, then set the free (non-leading) variables and express the pivot (leading) variables in terms of the free variables, then we can get a basis of the solutions. 
+
+We call the solutions that are not the 0-vector the non-trivial solutions, and 0 the trivial solution.
+
+\section{Independence and spanning sets}
+
+We used the word linearly independent throughout this notes, but we haven't formally defined what is linearly independent. We say vectors $v_1,\dots,v_n$ are linearly independent if the only solution to $c_1v_1+\cdots+c_nv_n=0$ is $c_1=\cdots=c_n=0$. Otherwise, we say they are linearly dependent. In other words, if one vector can be expressed by the other ones, then they are linearly dependent.
+
+\section{Basis}
+
+The span of a set of vectors is the set of all linear combinations of the vectors. We will call this set a basis of the span if its vectors are linearly independent.
+
+That is, a basis of a vector space is a set of vectors that are linearly independent and span the vector space.
+
+\section{Dimension}
+
+The dimension of a vector space is the size of its basis.
+
+$\dim T_A = \rank A$, where $A$ is the corresponding matrix of linear transformation $T_A$. 
+
+For finite dimensional vector space $V$, if $W$ is a subspace, then $\dim W \le \dim V$.
+
+\section{Linear transformations}
+
+\section{Coordinates}
+
+\section{Change of coordinates}
+
+\section{Rank}
+
+\section{Determinants}
+
+\section{Diagonalization}
 
 
 
