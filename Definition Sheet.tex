@@ -472,6 +472,13 @@
 
         }
     }
+    \newt{12312341}{
+        Let $V$ be a finite dimensional vector space over a field $\F$. Suppose taht $S$ is a spanning set and $I$ is a linearly independent set. Then:
+        \begin{enumerate}
+            \item There exists a subset $\be\subseteq S$ which is a basis for $V$; that is every spanning set contains a basis.
+            \item There exists a basis $\be$ of $B$ so that $I\subseteq \be$; that is every linearly independent set can be extended to a basis. 
+        \end{enumerate}
+    }
     \newco{co4}{
         Let $V$ be a finite dimensional vector space over $\F$. $S$ any spanning set for $V$, $I$ any independent set in $V$, and $\beta$ any basis. Then \[|I|\leq |\beta|\leq |S|.\]
     }
@@ -893,7 +900,7 @@
             \item For any $i\in\{1,\dots,n\}$, $\det A=\ds\sum_{j=1}^n (-1)^{i+j}A_{ij}\det\bra{\tilde{A}_{ij}}$. (This is called the ``row $i$ expansion of $\det A$''.)
             \item If $A$ has two identical rows, then $\det A=0$.
             \item If $B$ is obtained from $A$ by swapping two rows, then $\det B=-\det A$.
-            \item If $B$ is obtained from $A$ by scaring row $i$ by $a\in\F$, then $\det B=a\det A$.
+            \item If $B$ is obtained from $A$ by scaling row $i$ by $a\in\F$, then $\det B=a\det A$.
             \item If $B$ is obtained from $A$ by adding a multiple of one row to another, then $\det B=\det A$. (Here $n\ge2$ so that the statement makes sense.)
             \item If $A$ is upper (or lower) triangular, then $\det A$ is the product of the diagonal entries of $A$.
         \end{enumerate}
@@ -1043,7 +1050,7 @@
     }
 
     \newd{49}{
-        Suppose that $T:V\to V$ is linear and $\la\in\F$ is an eigenvalue. Then we know that $|la$ is a root of $C_T$, so we have $C_T(x)=(x-\la)^m p(x)$ for some $m\in\N$ and $p\in \T{P}(\F)$ so that $p(\la)\ne 0$.
+        Suppose that $T:V\to V$ is linear and $\la\in\F$ is an eigenvalue. Then we know that $\la$ is a root of $C_T$, so we have $C_T(x)=(x-\la)^m p(x)$ for some $m\in\N$ and $p\in \T{P}(\F)$ so that $p(\la)\ne 0$.
 
         We call $m$ the multiplicity of $\la$.
     }

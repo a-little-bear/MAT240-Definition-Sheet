@@ -5,6 +5,7 @@
 \def\headername{Review Notes}
 \def\name{Joseph Siu}
 \def\email{joseph.siu@mail.utoronto.ca}
+\usepackage{tikz-cd}
 \def\logo{\clsfiles/qunwang}
 \renewcommand{\nightmodebackground}{\clsfiles/tree}
 
@@ -21,7 +22,7 @@
 
 Commutativity, Associativity, Distributivity, Identity, Inverse.
 
-\section{Modular Arithmetic}
+\section{Modular arithmetic}
 
 $[a]+[b]=[a+b]$, $[a]\cd[b]=[a\cd b]$.
 
@@ -43,7 +44,7 @@ $[a]+[b]=[a+b]$, $[a]\cd[b]=[a\cd b]$.
     Assume $\gcd(a,n)=1$, then $ax+ny=1$ for some $x,y$, so $ax=1\pmod n$.
 }
 
-\section{Complex Number}
+\section{Complex number}
 
 Modulus is just the length of the line, which by pathagorean theorem is $\sqrt{x^2+y^2}$.
 
@@ -128,11 +129,11 @@ From here, we can also see why when finding the null space\footnote{Null space c
 
 \subsection{Purpose of row reductions}
 
-Relating to this discussion, we can see the purpose of row reductions is to transform the given matrix to a diagonalized (or mostly diagonalized) form, so that \tit{some} solutions of the diagonalized matrix remain the same as the original matrix \footnote{We say that the matrices that can diagonalize to the same diagonal matrix are \tit{similar}.}, for example the null space is preserved. 
+Relating to this discussion, we can see the purpose of row reductions is to transform the given matrix to a diagonalized (or mostly diagonalized) form, so that \tit{some} solutions of the diagonalized matrix remain the same as the original matrix, for example the null space is preserved. 
 
 \subsection{Other properties of similar matrices}
 
-However just knowing the points that do not change after ``diagonalization'' \footnote{The process of changing a matrix into a diagonalized form, but as we all know what some matrices (not full rank) cannot be fully diagonalized, here comes the Jordan Normal Form which will be discussed in MAT247.} is probably not that interesting enough, in fact, similar matrices also preserve another important property: the eigenvalues. Geometrically the eigenspace contains vectors that are only being streatched by some factor $\la$ after the linear tranasformation. Before we begin, the idea of determinant needs to be introduced.
+However just knowing the points that do not change after ``diagonalization'' \footnote{The process of changing a matrix into a diagonalized form, but as we all know what some matrices (not full rank) cannot be fully diagonalized, here comes the Jordan Normal Form which will be discussed in MAT247.} is probably not that interesting enough, in fact, similar matrices also preserve another important property: the eigenvalues.\footnote{Note that the converse is not true. Similar matrices have same determinant, same rank, same eigenvalues, same trace, same characteristic polynomial... However matrices with same eigenvalues / determinants does not imply they are similar.} Geometrically the eigenspace contains vectors that are only being streatched by some factor $\la$ after the linear tranasformation. Before we begin, the idea of determinant needs to be introduced.
 
 \subsection{Determinants}
 
@@ -166,9 +167,17 @@ Since the entries of $A$ are constants, and $\la I$ is a diagonal matrix where a
 
 So, the eigenvalues of a linear transformation / matrix are the roots of the characteristic polynomial determined using $\det\bra{A - \la I}=0$, the eigenvectors are the vectors that satisfy $Av=\la v$ for some eigenvalue $\la$, and the eigenspace is the space that contains all eigenvectors that correspond to the \tit{same} eigenvalue.
 
-\section{Vector Spaces}
+\newcl{3}{
+    Similar matrices have the same characteristic polynomial, thus same eigenvalues.
+}
 
-$T(ax+y)=aT(x)+T(y)$, $T(0)=0$.
+\newp{
+    $\det\bra{P^{-1}AP - \la I}=\det\bra{P^{-1}AP - \la P^{-1} P} = \det P^{-1} \det\bra{A - \la I} \det P = \det\bra{A - \la I}$.
+}
+
+\section{Vector spaces}
+
+$0\in V, ax+y\in V$.
 
 The dimension of a vector space is the size (cardinality) of the basis of the vector space. By replacement theorem, all bases of a vector space have the same size.
 
@@ -182,9 +191,11 @@ If $V=W_1+W_2$ and $W_1\cap W_2=\{0\}$, then $V=W_1\oplus W_2$. That is, if $V$ 
 
 \section{System of equations}
 
-To solve $Ax=B$, we augment the matrix $A$ to $A\mid B$, then perform row operations to make the left side to be in its RREF form, then set the free (non-leading) variables and express the pivot (leading) variables in terms of the free variables, then we can get a basis of the solutions. 
+To solve $Ax=B$, we augment the matrix $A$ to $A\mid B$, then perform row operations to make the left side to be in its RREF form, then set the free (non-leading) variables and express the pivot (leading) variables in terms of the free variables, then we can get a basis of the solutions. In particular, to find $N(A)$, we solve for $Ax=0$, that is, row reduce $A$ to RREF, the make free variables to be parameters and express pivot variables in terms of the variables, finally isolate the parameters then we can claim that the (null space) solutions are spanned by linear combinations of the vectors we obtained.
 
-We call the solutions that are not the 0-vector the non-trivial solutions, and 0 the trivial solution.
+We call the solutions that are not the 0-vector the non-trivial solutions, and 0 the trivial solution. And call the system of equations consistent if there exists a solution, and inconsistent otherwise.
+
+We will also call the system of equations homogeneous if the constants are all 0's. We are particular interested in homogeneous equatioins since they must either have only the trivial solution or also have non-trivial solutions, and the set of all solutions form a subspace of the domain. That is, they are always consistent.
 
 \section{Independence and spanning sets}
 
@@ -196,6 +207,10 @@ The span of a set of vectors is the set of all linear combinations of the vector
 
 That is, a basis of a vector space is a set of vectors that are linearly independent and span the vector space.
 
+As we can see a vector space may have different bases, but all the bases are linearly independent sets and have the same size. So intuitively, we may swap the elements in different bases and the resulting bases are still linearly independent and with the same size, and also still spanning the same space. 
+
+Another way of thinking this is that for some linearly independent set of a vector space, we are still able to add more independent vectors as long as the size of the set is less than the dimension / the size of the basis, and once the size reaches the dimension, we can claim that this set becomes a basis, and thus we cannot find more independent vectors to add to the set.
+
 \section{Dimension}
 
 The dimension of a vector space is the size of its basis.
@@ -206,17 +221,259 @@ For finite dimensional vector space $V$, if $W$ is a subspace, then $\dim W \le 
 
 \section{Linear transformations}
 
-\section{Coordinates}
+$T(ax+y)=aT(x)+T(y)$, $T(0)=0$.
 
-\section{Change of coordinates}
+As explained earlier, every linear transformation is associated with a matrix.
+
+Null space contains vectors in domain that are sent to 0 by the linear transformation, the image is just the column space, that is, the space spanned by the column vectors.
+
+Injection, surjective, and isomorphism are equivalent since they all describe the null space to contain only the 0-vector, thus the image is also the entire space. An important idea here is that if a particular vector satisfies a solution, so is and only such particular vector added with any veector in the null space would also give the solution. In other words, the difference between any two solutions is in the null space, namely $D(s-p)=D(s)-D(p)=0$ for any two solutions $s$ and $p$, so $s-p\in N(T)$ and is also a solution.
+
+Consider the dimension theorem $\dim V = \dim \T{im} T + \dim N(T)$, this basically tells us the relating between the null space and the image when the size of the basis is fixed. That is, first record the basis vectors in the domain, then if we know what basis remain in the image, we can also know what basis remain in the null space. And here as we have noticed that the solutions are spanned by a particular solution and a null space basis, so the uniqueness of the solutions can be guaranteed if the null space is $\{0\}$, this shows that every vector in the image can still be expressed as a combination of the basis vectors in the domain, that is, the basis after applied linear transformation still spans the image since some basis vectors span the null space and the remaining span the image.
+
+\section{Isomorphism and invertibility}
+
+Isomorphism is just a fancy term for bijective linear transformations. If there exists a bijection between two vector spaces, then the linearality of the transformation guarantees that the transformed basis is still a basis (of the image), and so the null space must be only $\{0\}$.
+
+\section{Change of coordinates from standard bases' perspectives}
+
+Throughout the discussion we have been treating the input as a vector. A vector is just a list of numbers, but how do we know about the vector with respect to the whole system, we might implicitely assume a standard basis and ``plot'' the vector onto the grid created by the standard basis. But as we can see the bases are often not standard, and matrices are not always the identity matrix.
+
+As the amazing \hyperlink{https://www.youtube.com/watch?v=P2LTAUO1TdA}{3blue1brown} video has mentioned, since the columns of a matrix span the image, input a vector, then the vector consists of ``scalars'' of the columns, and the output is the linear combination of the columns, that is, another vector. The entries of the output vector have no meaning if we do not assign a coordinate system, or a basis to it. They are only meaningful with respect to some basis, for example, the standard basis.
+
+So how do we know the different vectors in different bases are essentially the same with respect to their coordinate system\footnote{We use the notation $[v]_\be$ to denote $v$ as a linear combination of the vectors in basis $\be$. Coordinate systems can be treated as bases, when a vector is in a coordinate system we say it is a linear combination of the coresponding basis, that is, from that basis' perspective.}? The most straightforward way would be just ``undo'' the transformations by applying the matrices that have columns as their corresponding bases, then the resulting vector can be directly viewed with respect to the standard basis:
+
+\[\underbrace{v}_{\substack{\T{a linear combination of} \\\T{the standard basis}}} = \underbrace{A}_{\substack{\T{columns are vectors}\\\T{in another basis}}}\;\;\underbrace{v'}_{\substack{\T{a linear combination}\\\T{of the other basis}}},\] to change the standard basis linear combination to the other basis', we can just multiply the inverse\footnote{Basis vectors are linearly independent, combining the fact that $A$ is a square matrix, thus the matrix is always a full rank square matrix so it is invertible.}:
+
+\[\underbrace{A^{-1}}_{\substack{\T{inverse of a matrix where}\\\T{the columns are vectors}\\\T{in another basis}}}\;\;\underbrace{v}_{\substack{\T{a linear combination of} \\\T{the standard basis}}} = \underbrace{v'}_{\substack{\T{a linear combination}\\\T{of the other basis}}}.\]
+
+\subsection{Combine linear transformations and change of bases}
+
+What we have discussed was the scanario when we want to simply convert a vector from a basis to the standard basis, or from the standard basis to another basis (of the same vector space), however what if we want to involve a linear transformation from a vector space to itself with respect to the standard basis? For example, a rotation where the matrix is given in the standard basis, and we want to perform the same rotation with respect to other bases. 
+
+First consider $v=Av'$ (where $A$ is the change of basis matrix from given basis to the standard basis), then both sides are represented in the standard basis, now apply a linear transformation $M$ (where $T$ is a linear transformation from a vector space to itself with respect to the standard basis, and $M$ is the corresponding matrix of $T$) and we have $Mv=MAv'$, both sides are still represented as a linear combination of the standard basis. Finally apply $A^{-1}$ to ``undoes'' the change of basis and we get $A^{-1}Mv=A^{-1}MAv'$. What we have been doing at the right hand side is that, we first consider a vector that is a linear combination of the second basis, transform it into the standard basis, then apply the linear transformation for the standard basis vectors, and finally convert the result back to the second basis.
+
+Does $A^{-1}MA$ look familiar? Consider $M'=A^{-1}MA$, then we can see that $M'$ and $M$ are similar, that is, the same transformation under different bases are similar. If we let $M$ to be the identity transformation for standard basis, then $A^{-1}A=I$, the identity transformation with respect to any basis is still the identity matrix. 
+
+So far, we have discussed the change of basis and linear transformations within a vector space $V$, we use $[T]_\be^{\be'}$ to denote a transformation that takes in a vector in coordinate system $\be$, and ouputs a vector in coordinate system $\be'$. To extend the scanario to any general case, let's consider linear transformations that the codomain and domain are different.
+
+\subsection{Extending to different vector spaces}
+
+Given a linear transformation $T$ from $V$ to $W$ and its $M$. What we really is doing here is that we convert the vector $v$ in $V$ that is represented in the standard basis, using the linear transformation $T$, to a new vector $v'$ that is represented in the standard basis of $W$.
+
+What if our given vector is not represented in the standard basis' notation, or what if we want the output to be in a different basis respective (in another coordinate system)? 
+
+Let $T$ be a linear transformation from $V$ and $W$, and $M$ be its matrix. Let $\be, \ga$ be bases for $V$ and $W$ respectively. Then what $[T]_\be^\ga$ means is that consider a vector $v$ in $V$ that is a linear combination of $\be$ coordinate system, then we first change it to the standard coordinate system, then apply the linear transformation $T$ which accepts vectors in the standard coordinate system and outputs vectors in the standard basis of $W$, then we convert the output to the $\ga$ coordinate system.
+
+That is, let $A$ be the change of coordinate matrix of $V$ from $\be$ to standard basis, let $B$ be the change of coordinate matrix of $W$ from standard basis to $\ga$, then $[T]_\be^\ga = BM A$. 
+
+Since $A$ is from $\be$ to standard, then $A$ is just the matrix where its columns are the vectors in $\be$\footnote{Here we can see the idea that $A$ is translating a vector in langauge $\be$ to the standard language, and $A^{-1}$ is translating a standard language back to $\be$.}, oppositely $B^{-1}$ is the matrix where its columns are the vectors in $\ga$.
+
+\neweg{
+    Consider $\be=\{1,x,x^2,x^3,x^4\}, \ga=\{1,x,x^2,x^3\}. T: P_4(\R)\to P_3(\R), T(p(x))=p'(x)$. \begin{equation*}
+        B^{-1} = \bra{
+            \begin{array}
+                {cccc}
+                1 & 0 & 0 & 0\\
+                0 & 1 & 0 & 0\\
+                0 & 0 & 1 & 0\\
+                0 & 0 & 0 & 1
+            \end{array}
+        }\quad
+        M = \bra{
+            \begin{array}
+                {ccccc}
+                0 & 1 & 0 & 0 & 0\\
+                0 & 0 & 2 & 0 & 0\\
+                0 & 0 & 0 & 3 & 0\\
+                0 & 0 & 0 & 0 & 4
+            \end{array}
+        }\quad
+        A = \bra{
+            \begin{array}
+                {ccccc}
+                1 & 0 & 0 & 0 & 0\\
+                0 & 1 & 0 & 0 & 0\\
+                0 & 0 & 1 & 0 & 0\\
+                0 & 0 & 0 & 1 & 0\\
+                0 & 0 & 0 & 0 & 1
+            \end{array}
+        }.
+    \end{equation*}
+
+    Combine them then we get the same answer as the textbook:
+
+    \begin{align*}
+        [T]_\be^\ga = BMA &=    \bra{
+            \begin{array}
+                {cccc}
+                1 & 0 & 0 & 0\\
+                0 & 1 & 0 & 0\\
+                0 & 0 & 1 & 0\\
+                0 & 0 & 0 & 1
+            \end{array}
+        }^{-1}\bra{
+            \begin{array}
+                {ccccc}
+                0 & 1 & 0 & 0 & 0\\
+                0 & 0 & 2 & 0 & 0\\
+                0 & 0 & 0 & 3 & 0\\
+                0 & 0 & 0 & 0 & 4
+            \end{array}
+        }\bra{
+            \begin{array}
+                {ccccc}
+                1 & 0 & 0 & 0 & 0\\
+                0 & 1 & 0 & 0 & 0\\
+                0 & 0 & 1 & 0 & 0\\
+                0 & 0 & 0 & 1 & 0\\
+                0 & 0 & 0 & 0 & 1
+            \end{array}
+        }\\
+        &=\bra{
+            \begin{array}
+                {cccc}
+                1 & 0 & 0 & 0\\
+                0 & 1 & 0 & 0\\
+                0 & 0 & 1 & 0\\
+                0 & 0 & 0 & 1
+            \end{array}
+        }\bra{
+            \begin{array}
+                {ccccc}
+                0 & 1 & 0 & 0 & 0\\
+                0 & 0 & 2 & 0 & 0\\
+                0 & 0 & 0 & 3 & 0\\
+                0 & 0 & 0 & 0 & 4
+            \end{array}
+        }\\
+        &=\bra{
+            \begin{array}
+                {ccccc}
+                0 & 1 & 0 & 0 & 0\\
+                0 & 0 & 2 & 0 & 0\\
+                0 & 0 & 0 & 3 & 0\\
+                0 & 0 & 0 & 0 & 4
+            \end{array}
+        }
+    \end{align*}
+
+    Same logic applies to the mid term problem too.
+}
+
+So, since we can see that $[T]_\be^\ga=BMA$ for some invertible matrices $A$ and $B$, and there exists a bijection between linear transformations ($T$) and matrices ($M$), we can see the function that reads $\be,\ga, T$ and outputs $[T]_\be^\ga = BMA$ is also a bijection. Namey the map $\phi^\ga_\be: \cal{L}(V,W)\to \mat[m]{n}$ given by $\phi_\be^\ga(T)=[T]_\be^\ga$ is a bijection, thus the vector spaces $V$ and $M$ have an isomorphism. 
+
+\subsection{Composing linear transformations with change of bases}
+
+Let's end this discussion with linear transformation compositions.
+
+To understand why $[S\circ T]_\be^\ga = [S]^\ga_\al [T]_\be^\al$ for some linear transformations $S,T$ and some bases $\al,\be,\ga$, intuitively we can see $[T]_\be^\al$ reads a vector in $\be$ coordinate system, and outputs a vector in $\al$ coordinate system, then we read such vector into $[S]^\ga_\al$ and outputs our final vector in the langauge of $\ga$. So for the same input, through \tit{same} two transformations, we should expect the output to be the same.
+
+Through our previous equality, we can directly see that $[S]^\ga_\al [T]_\be^\al = G M_S A^{-1} \cd A M_T B = G M_S M_T B = [S\circ T]_\be^\ga$ where $A$ changes standard to $\al$, $B$ changes $\be$ to standard, and $G$ changes standard to $\ga$. Similarly $\sqrbra{T^{-1}}_\ga^\be= B^{-1} M^{-1} G^{-1}$ and $\bra{[T]_\be^\ga}^{-1}=\bra{G M B}^{-1}=B^{-1} M^{-1} G^{-1}$, thus $\sqrbra{T^{-1}}_\ga^\be=\bra{[T]_\be^\ga}^{-1}$.
+
+\subsection{Understand the fancy graph}
+
+\[
+    \begin{tikzcd}[row sep=huge, column sep=huge]
+        V \arrow{r}{T} \arrow[swap]{d}{\phi_\be} & W \arrow{d}{\phi_\ga}\\
+        \F^n \arrow[swap]{r}{[T]_\be^\ga} & \F^m
+    \end{tikzcd}
+\]
+
+First, $\phi_\be$ and $\phi_\ga$ are the linear transformations that convert standard basis vectors to the bases $\be$ and $\ga$ respectively, because every vector space is bijective thus isomorphic to itself, we know the change of basis function must also be bijective, thus all processes are reversable / invertible.
+
+Moreover, $V\stackrel{T}{\to} W$ is a linear transformation from $V$ to $W$ with respect to their standard bases. And $[T]_\be^\ga$ is the matrix that takes in a vector in $\be$ coordinate system, and outputs a vector in $\ga$ coordinate system, where we implicitely changed the input vector to the standard coordinate system and changed the resulting vector from standard to $\ga$.
+
+To sum up, we explained $[T]_\be^\ga$ through the path 
+
+\[
+    \begin{tikzcd}[row sep=huge, column sep=huge]
+        V \arrow{r}{T}  & W \arrow{d}{\phi_\ga}\\
+        \F^n \arrow{u}{\phi_\be^{-1}} \arrow[swap]{r}{[T]_\be^\ga} & \F^m
+    \end{tikzcd}
+\]
+
+\subsection{Another interesting observation}
+
+Since $[T]_{\be'}=[I_V]_\be^{\be'}[T]_\be[I_V]_{\be'}^\be$, and $[I_V]_\be^{\be'}$ is the inverse of $[I_V]_{\be'}^\be$, this means that $[T]_{\be'}$ is similar to $[T]_\be$. That is, let $A$ be the change of basis (coordinate) matrix from $\be$ to standard, then $[T]_\be=A^{-1}TA$, let $B$ be the one for $\be'$, then $[T]_{\be'}=B^{-1}TB$. Combine them and we have $A^{-1}TA=Q^{-1}B^{-1}TBQ$ where $Q$ is an invertible matrix since $[T]_{\be'}$ is similar to $[T]_\be$. Hence, by iscolating $Q$, we get $A=BQ$ thus $Q=B^{-1}A$. Here the equality makes sense: let $v$ be a vector in $\be$, we apply transformation $A$ to get its standard coordinate, then apply $B^{-1}$ which translate standard coordinate to $\be'$ coordinate, thus overall we have a series of transformations that translate a vector in $\be$ to $\be'$. 
+
+% Why is this interesting though? For full rank square matrices that the images are the same vector space, we can see that they all must be similar to each other (they are actually all similar to the identity matrix, that is, the standard basis matrix). Not only this, they are also coordinate systems of the same vector space...
 
 \section{Rank}
 
+Since we define rank to be the dimension of the image (column space) of the matrix, despite we perform row operations to figure out the rank of a matrix, we still count the number of \tit{columns} to determine the rank instead of rows.
+
+Notice that here row operations will not change the linear independency of the columns, but the column space (image) \tit{is} changed, however we are not interested in that since we just need the rank to be unchange; similarly we can see column operations also preserve the linear independency and also the column space thus also the rank.
+
 \section{Determinants}
+
+Here are the essential properties of determinants:
+
+\begin{itemize}
+    \item $\det A = \ds\sum_{j=1}^n (-1)^{i+j} A_{ij} \det\bra{\tilde{A_{ij}}}\quad \forall i\in\{1,\dots,n\}$
+    \item $\det A^T = \det A$
+    \item each \tbf{row} of the matrix is a linear function of the determinant.
+\end{itemize}
+
+By the first property we may derive the ones like 
+\begin{enumerate}
+    \item row of zeros implies $\det A = 0$.
+    \item same rows implies $\det A = 0$.
+    \item swap rows implies $\det A' = -\det A$.
+    \item Upper / Lower triangular implies $\det A=\ds\prod_{i=1}^n A_{ii}$.
+\end{enumerate}
+
+By the second property, we maye perform the first property vertically instead of horizontally for a fixed $i$.
+
+By the thid property, we can see that add one row to another does not affect the determinant.
+
+\subsection{Similar matrices and determinants}
+
+From properties 1 and 3 we may also deduce $\det(AB)=\det(A)\det(B)$, and this property is useful for showing the determinants of similar matrices. 
+
+First, since $\det(A^{-1}A)=\det(I)=1$, by the above equality we have $\det(A^{-1})\det(A)=1$, thus by letting $A,B$ be similar, then $A=P^{-1}BP$, and so $\det A = \det P^{-1} \det B \det P = \det B$. This shows similar matrices have same determinants.
+
+In addition, since $T=A^{-1}TA=[T]_\be$ for some change of basis matrix $A$ from a basis $\be$ to the standard basis, we can see $T\sim [T]_\be$, thus $\det T = \det [T]_\be$.
 
 \section{Diagonalization}
 
+Sometimes computing matrix $A^{100}$ is sophisticated, but if $A$ is a diagonal matrix, then $A^{100}$ is just the diagonal matrix with each diagonal entry to the power of 100. So, if $A=P^{-1}DP$ for some diagonal matrix $D$, then $A^{100}=\bra{P^{-1}DP}^{100}=P^{-1}D^{100}P$ where the intermediate $P^{-1}P$ cancels out. The idea of diagonalization is to simplify the matrix into the way that is much easier for us to perform computation, and other properties. 
 
+The matrix definition of diagonalizable and the linear transformation definition of diagonalizable are equivalent. As explained, let $M$ be the matrix of the linear transformation $T$, then $[T]_\be=A^{-1}TA$ for some change of basis matrix $A$, if $[T]_\be=A^{-1}TA=D$ for some diagonal matrix $D$. then $T=ADA^{-1}$, thus $T$ is diagonalizable. All our steps are reversible, thus the two definitions are equivalent.
+
+Since we proved that similar matrices have the same eigenvalues, and a matrix $M$ is diagonalizable if and only if it is similar to a diagonal matrix, this means that the diagonal matrix and the original matrix \tit{must} have the same eigenvalues.
+
+To see how we will show a matrix is diagonalizable, let's first discuss the eigenbases.
+
+\subsection{Eigenbases}
+
+Let $E_\la=\{v\in V\mid \bra{A-\la I} v = 0\}$ be the eigenspace of eigenvalue $\la$, since $Av=\la v\ne \la' v$ for some $v$ in $E_\la$ and some other eigenvalue $\la'$, this shows the union of the bases of the eigenspaces form a linearly independent set. Moreover, in order for these bases vectors to span the entire vector space, the size of the set must be equal to the dimension of the space, that is, the \tit{sum} of the dimension of \tit{all} $E_\la$ needs to be equal to the dimension of the vector space.\footnote{Geometric multiplicity is the dimension of the null space of an eigenspace; Algebric multiplicity is the power of the factor in the characteristic polynomial, that is, if $C_T(x)=(x-\la)^k p(x)$, then the algebric multiplicity of $\la$ is $k$. Since the geometric multiplicity is always at most the algebric multiplicity, to show the matrix is not diagonalizable, it suffices to find one eigenvalue $\la$ such that its geometric multiplicity is strictly less than its algebric multiplicity, this can be done by comparing the dimension of its null space and the power of the factor in the characteristic polynomial.}
+
+\begin{enumerate}
+    \item If the sum of the dimensions are precisely the dimention of the vector space, then let $P$ be the matrix that the columns are the bases vectors of eigenspaces, since it is linearly independent and the column vectors form a basis, this means $P$ is full rank thus invertible, and also represents a change of coordinate matrix.
+
+    \newcl{4}{
+        If we change the coordinate of our original matrix $A$ to using the eigenbasis, then $P^{-1}AP$ is a diagonal matrix.
+    }
+
+    \newp{
+        Let the eigenbasis be $\{w_1,...,w_n\}$ where $w_i$ is an eigenvector of $\la_i$. Consider arbitrary vector $v$ in vector space in eigenbasis coordinate system, let $c_i$ be the $i^{\T{th}}$ entry of $v$, apply $P$ to the entry then it becomes $c_iw_i$, since $w_i$ is an eigenvector, apply transformation matrix $A$ then we have $Ac_iw_i=\la_ic_iw_i$, now apply $P^{-1}$ and convert the coordinate back to eigenbasis', and we can see it becomes $\la_i c_i$. Since our entry was arbitrary, this means 
+
+        \[P^{-1}APv=\left[\begin{array}{cccc}\lambda_1 & 0 & \cdots & 0 \\ 0 & \lambda_2 & \ddots & \vdots \\ \vdots & \ddots & \ddots & 0 \\ 0 & \cdots & 0 & \lambda_n\end{array}\right]v,\]
+
+        which is a diagonal matrix, as needed.
+    }
+
+    In this way, we first find the eigenvalues from the characteristic polynomial, then checked the existence of an eigenbasis, if it exists, then change the basis of the matrix to the eigenbasis, then the matrix is diagonal. \footnote{the order of the vectors in eigenbasis does not matter, so many rearrangement of the eigenvalues work here.} So now we have found its similar diagonal matrix (and \tit{surprisingly} the diagonals are engenvalues \footnote{If the diagonal matrix has entry that is not the eigenvalue, then through its characteristic polynomial they have different eigenvalues, thus not similar, which contradicts our previuos observation.}).
+
+    \item If the sum of the dimensions are strictly less than the dimension of the vector space, then assume for contradiction it is diagonalizable, then there exists an eigenbasis that changes $A$ to the diagonal matrix $D$, however there cannot be such eigenbasis since there is no enough independent eigenvectors to span the entire vector space, thus contradiction. In this case the matrix is not diagonalizable.
+\end{enumerate}
+
+\subsection{Final observation}
+
+If $T: V\to V$ is diagonalizable when $\dim V = n$, then we can find $n$ independent eigenvectors such that each eigenvector spans a one-dimensional subspace of $V$, and is invariant due to the vectors being eigenvectors, so $V=E_1\oplus \cdots \oplus E_n$ for eigenspaces $E_n$. 
+
+Does the converse also hold? If $V=E_1\oplus \cdots \oplus E_n$ for invariant subspaces $E_n$, then we can find $n$ independent eigenvectors that their images span the entire vector space, thus by replacement theorem it has an eigenbasis, which means the matrix is diagonalizable.
 
 
 \end{document}
